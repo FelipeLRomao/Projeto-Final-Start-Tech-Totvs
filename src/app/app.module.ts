@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { CursosComponent } from './cursos/cursos.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PoModule } from '@po-ui/ng-components';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { CursosComponent } from './cursos/cursos.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    PoModule,
+    HttpClientModule,
+    RouterModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]
