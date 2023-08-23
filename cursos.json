@@ -1,0 +1,101 @@
+{
+	"cursos": [
+
+		{
+			"id": 1,
+			"name": "Python",
+			"description": "Começando com a linguagem",
+			"foto": "https://i.ibb.co/JKzFtzj/casa.jpg",
+			"preco": "$ 159.80",
+			"favorito": true
+		},
+		{
+			"id": 2,
+			"name": "Javascript para Web",
+			"description": "Crie páginas dinâmicas",
+			"foto": "https://i.ibb.co/JKzFtzj/casa.jpg",
+			"preco": "$ 214.73",
+			"favorito": true
+		},
+		{
+			"id": 3,
+			"name": "Angular",
+			"description": "componentização e design com Angular Material",
+			"foto": "https://i.ibb.co/JKzFtzj/casa.jpg",
+			"preco": "$ 275.18",
+			"favorito": true
+		},
+		{
+			"id": 4,
+			"name": "Inteligencia Artificial e UX",
+			"description": "Otimize a construção de um produto digital",
+			"foto": "https://i.ibb.co/JKzFtzj/casa.jpg",
+			"preco": "$ 281.09",
+			"favorito": true
+		},
+		{
+			"id": 5,
+			"name": "Mobile: IOS e HTTP",
+			"description": "Web Services e sicronização offine",
+			"foto": "https://i.ibb.co/JKzFtzj/casa.jpg",
+			"preco": "$ 190.17",
+			"favorito": false
+		},
+		{
+			"id": 6,
+			"name": "HTML e CSS",
+			"description": "Praticando HTML/CSS",
+			"foto": "https://i.ibb.co/JKzFtzj/casa.jpg",
+			"preco": "$ 160.45",
+			"favorito": false
+		},
+		{
+			"id": 7,
+			"name": "SQL com MySQL",
+			"description": "Manipule e consulte dados",
+			"foto": "https://i.ibb.co/JKzFtzj/casa.jpg",
+			"preco": "$ 182.17",
+			"favorito": false
+		},
+		{
+			"id": 8,
+			"name": "UX Usability",
+			"description": "Facilite a vida do seu usuário no mobile",
+			"foto": "https://i.ibb.co/JKzFtzj/casa.jpg",
+			"preco": "$ 165.41",
+			"favorito": false
+		},
+		{
+			"id": 9,
+			"name": "Data Science",
+			"description": "Visualização de dados para saúde e medicina",
+			"foto": "https://i.ibb.co/JKzFtzj/casa.jpg",
+			"preco": "$ 161.42",
+			"favorito": false
+		},
+		{
+			"id": 10,
+			"name": "Automação e Perfomance",
+			"description": "Perfomance Web I: otimização o front-end",
+			"foto": "https://i.ibb.co/JKzFtzj/casa.jpg",
+			"preco": "$ 225.49",
+			"favorito": false
+		},
+		{
+			"id": 11,
+			"name": "React",
+			"description": "lidando com arquivos estáticos",
+			"foto": "https://i.ibb.co/JKzFtzj/casa.jpg",
+			"preco": "$ 188.18",
+			"favorito": false
+		},
+		{
+			"id": 12,
+			"name": "Linux I",
+			"description": "conhecendo e utilizando o terminal",
+			"foto": "https://i.ibb.co/JKzFtzj/casa.jpg",
+			"preco": "$ 275.03",
+			"favorito": false
+		}
+	]
+}
