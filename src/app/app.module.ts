@@ -12,6 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +30,9 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     PoModule,
     HttpClientModule,
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule,
     RouterModule.forRoot([])
   ],
   providers: [],
