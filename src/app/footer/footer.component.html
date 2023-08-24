@@ -3,78 +3,16 @@
     <mat-grid-list cols="4" rowHeight="2.5:3">
         <mat-grid-tile>
             <ul type="none">
-                <li>
+                <li *ngFor="let redeSocial of redesSociais">
                     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                        <mat-icon>group</mat-icon>
+                        <img [src]="redeSocial.icone" alt="">
                     </button>
-                    <a href="">
-                        <span>Redes Sociais</span>
-                    </a>
-                </li>
-                <li>
-                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                        <mat-icon>mailoutline</mat-icon>
-                    </button>
-                    <a href="">
-                        <span>Contato</span>
-                    </a>
-                </li>
-                <li>
-                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                        <mat-icon>hearing</mat-icon>
-                    </button>
-                    <a href="">
-                        <span>Suporte</span>
-                    </a>
-                </li>
-                <li>
-                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                        <mat-icon>hearing</mat-icon>
-                    </button>
-                    <a href="">
-                        <span>Suporte</span>
+                    <a [href]="redeSocial.link">
+                        <span>{{redeSocial.app}}</span>
                     </a>
                 </li>
             </ul>
         </mat-grid-tile>
-        <mat-grid-tile>
-            <ul type="none">
-                <li>
-                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                        <mat-icon>group</mat-icon>
-                    </button>
-                    <a href="">
-                        <span>Redes Sociais</span>
-                    </a>
-                </li>
-                <li>
-                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                        <mat-icon>mailoutline</mat-icon>
-                    </button>
-                    <a href="">
-                        <span>Contato</span>
-                    </a>
-                </li>
-                <li>
-                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                        <mat-icon>hearing</mat-icon>
-                    </button>
-                    <a href="">
-                        <span>Suporte</span>
-                    </a>
-                </li>
-                <li>
-                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                        <mat-icon>hearing</mat-icon>
-                    </button>
-                    <a href="">
-                        <span>Suporte</span>
-                    </a>
-                </li>
-            </ul>
-        </mat-grid-tile>
-        <mat-grid-tile>3</mat-grid-tile>
-        <mat-grid-tile>4</mat-grid-tile>
     </mat-grid-list>
     </div>
 </footer>

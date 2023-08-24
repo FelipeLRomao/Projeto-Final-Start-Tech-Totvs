@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-footer',
@@ -8,7 +7,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 })
 export class FooterComponent {
 
-  redesSocias: Array<any> = [
+  redesSociais: Array<any> = [
     {
       app: "Facebook",
       link: "https://www.facebook.com/",
@@ -22,14 +21,13 @@ export class FooterComponent {
     {
       app: "Instagram",
       link: "https://www.instagram.com/",
-      icone: "https://i.ibb.co/55CXnKm/instagram.jpg"
+      icone: "https://i.ibb.co/N3DrdBr/instagram-image.png"
     },
     {
       app: "GitHub",
       link: "https://github.com/FelipeLRomao/Projeto-Final-Start-Tech-Totvs",
-      icone: "https://i.ibb.co/B38Y8Tw/github.jpg"
+      icone: "https://i.ibb.co/jHBk9BY/github-logo.jpg"
     }
   ];
-
 
 }

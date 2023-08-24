@@ -2,21 +2,26 @@
 
 
 footer {
-    .container{
-    width: 100%;
-    background-image: linear-gradient(to right, #479BDB, #7BDD88);
-    color: white;
-    }
-    ul {
-        padding-right: 100px;
+    
+    .container {
+        margin-bottom: 0;
+        margin-top: 100px;
+        height: 275px;
+        width: 100%;
+        background-image: linear-gradient(to right, #479BDB, #7BDD88);
+        color: white;
 
-        li {
-            a {
-                text-decoration: none;
-                color: white;
+        ul {
+            padding-right: 100px;
 
-                span {
-                    font-size: 18px;
+            li {
+                a {
+                    text-decoration: none;
+                    color: white;
+
+                    span {
+                        font-size: 18px;
+                    }
                 }
             }
         }
