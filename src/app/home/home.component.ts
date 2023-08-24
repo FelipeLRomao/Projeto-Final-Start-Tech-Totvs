@@ -1,5 +1,5 @@
 import { Component, Input, OnDestroy, OnInit, } from '@angular/core';
-import { PoMenuItem } from '@po-ui/ng-components';
+import { PoMenuItem, PoModule } from '@po-ui/ng-components';
 import { Router } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -7,15 +7,20 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { Subscription, timer} from 'rxjs';
+import {MatDialog, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
+import { LiveFormDialogComponent } from '../live-form-dialog/live-form-dialog.component';
+
+
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [MatGridListModule, MatCardModule, MatIconModule, NgFor, NgIf,  CommonModule]
+  imports: [MatGridListModule, MatCardModule, MatIconModule, NgFor, NgIf,  CommonModule, PoModule, MatDialogModule]
 })
 export class HomeComponent implements OnInit, OnDestroy {
+  constructor(public dialog: MatDialog) {}
    // Guarda a referência do temporizador. Assim conseguimos interromper o temporizador a qualquer momento
    timerSubs!: Subscription;
    // Array com a URL das imagens do carrossel
@@ -29,20 +34,32 @@ export class HomeComponent implements OnInit, OnDestroy {
      get indexImagemAtiva() {
        return this._indexImagemAtiva;
      }
-   
+
      set indexImagemAtiva(value: number) {
        this._indexImagemAtiva =
          value < this.imagens.length ? value : 0;
      }
-   
+
      ngOnInit(): void {
        this.iniciarTimer();
      }
-   
+
+    //  Inicio códiogo Modal
+   abrirModalCurso(): void{
+    const dialogRef = this.dialog.open(LiveFormDialogComponent, {
+      width: '250px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('O dialogo ira fechar');
+    });
+   }
+
+
      ngOnDestroy(): void {
        this.pararTimer();
      }
-   
+
      iniciarTimer(): void {
        this.timerSubs = timer(3000).subscribe(() => {
          this.ativarImagem(
@@ -50,13 +67,15 @@ export class HomeComponent implements OnInit, OnDestroy {
          );
        });
      }
-   
+
      pararTimer(): void {
        this.timerSubs?.unsubscribe();
      }
-   
+
      ativarImagem(index: number): void {
        this.indexImagemAtiva = index;
        this.iniciarTimer();
      }
+
+
 }

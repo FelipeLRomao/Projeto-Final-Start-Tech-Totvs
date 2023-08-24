@@ -1,1 +1,45 @@
-<p>contato works!</p>
+<div class="contato">
+    <div class="container">
+        <h1 class="text">Fale com a CodeCreators</h1>
+        <form (ngSubmit)="submitForm()">
+            <mat-form-field class="form-row">
+                <div class="underline"></div>
+                <mat-label>Nome</mat-label>
+                <input class="input-data" matInput [formControl]="nome" required>
+                <mat-error *ngIf="nome.invalid">{{getErrorMessage()}}</mat-error>
+            
+            </mat-form-field>  
+            <mat-form-field class="form-row">
+                <div class="underline"></div>
+                <mat-label>E-mail</mat-label>
+                <input class="input-data" matInput [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field> 
+            <mat-form-field class="form-row">
+                <div class="underline"></div>
+                <mat-label class="input-data">Assunto</mat-label>
+                <mat-select [formControl]="assunto">
+                <mat-option value="elogio">Elogio/Sugestão</mat-option>
+                <mat-option value="suporte">Reclamação</mat-option>
+                <mat-option value="rh">Trabalhe Conosco</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="form-row">
+                <div class="underline"></div>
+                <mat-label class="input-data">Digite sua mensagem</mat-label>
+                <textarea rows="3" cols="80" matInput  [formControl]="mensagem"></textarea>
+                <mat-error *ngIf="mensagem.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <div class="form-row submit-btn">
+                <div class="input-data">
+                    <div class="inner"></div>
+                    <input type="submit" value="ENVIAR">
+            <button class="form-row submit-btn" mat-button [disabled]="(nome.invalid || email.invalid || mensagem.invalid ? 'true' : '')" type="submit">
+                Enviar
+            </button>
+        </div>
+        </div>
+        </form>
+    </div>
+</div>
+
