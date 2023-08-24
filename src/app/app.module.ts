@@ -17,13 +17,20 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDialogModule} from '@angular/material/dialog';
+import { LiveFormDialogComponent } from './live-form-dialog/live-form-dialog.component';
+
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CabecalhoComponent,
     CursosComponent,
-    FooterComponent
+    FooterComponent,
+    LiveFormDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatButtonModule,
     MatIconModule,
     MatToolbarModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
+
   ],
   providers:[],
   bootstrap: [AppComponent]
