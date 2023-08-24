@@ -1,1 +1,18 @@
-<p>cabecalho works!</p>
+<mat-toolbar>
+    <div class="container">
+        <h1>CodeCreators</h1>
+        <span class="menu-spacer"></span>
+        <button class="" mat-button routerLink="/">Home</button>
+        <button mat-button routerLink="cursos">Nossos Cursos</button>
+        <button mat-button routerLink="contato">Contato</button>
+        <button class="auth" mat-button  routerLink="login">
+            <mat-icon aria-hidden="false" aria-label="Acessar o sistema" fontIcon="login"></mat-icon>
+            Login
+        </button>
+        <button class="auth" mat-button>
+            <mat-icon aria-hidden="false" aria-label="Sair do sistema" fontIcon="logout"></mat-icon>
+            Logout
+        </button>
+    </div>
+</mat-toolbar>
+
