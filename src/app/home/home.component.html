@@ -1,6 +1,5 @@
-<<<<<<< HEAD
+
 <h1>Teste Home</h1>
-=======
 <!-- INICIO CARROSSEL -->
 <div class="item" [style.backgroundImage]="'url(' + imagens[indexImagemAtiva] + ')'"></div>
 <!-- BOTÕES DE CONTROLE DO CARROSSEL -->
@@ -17,19 +16,15 @@
   <h2>TODOS OS CURSOS</h2>
 <!-- Cards de cursos inicio -->
   <mat-grid-list cols="4" rowHeight="3:4">
+  <div *ngFor="let curso of cursos">
   <mat-grid-tile>
     <mat-card>
-      <img class="img-card-home" mat-card-image src="../../assets/images/curse1.jpg">
+      <img class="img-card-home" mat-card-image src='{{curso.foto}}'>
       <mat-card-content>
-        <h2>HTML do Zero ao Avançado</h2>
-        <p>Aprenda a linguagem de marcação que é a estrutura de todo o site e aplicação web.</p>
-        <p>Neste curso você irá desenvolver sites estáticos, aprendendo as tags semânticas.</p>
-        <ul>
-          <li>Tipo: Avançado completo</li>
-          <li>Players: Áudio e Video</li>
-          <li>Duração: 36Horas</li>
-          <li>Valor: R$ 196,00</li>
-        </ul>
+        <h2>{{curso.name}}</h2>
+        <p class="descricao">{{curso.description}}</p>
+        <p class="preco">R$ {{curso.preco}}</p>
+        <p>Ref: {{curso.id}}</p>
       </mat-card-content>
       <mat-card-actions>
 
@@ -39,171 +34,8 @@
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>
-
-  <mat-grid-tile>
-    <mat-card>
-      <img class="img-card-home" mat-card-image src="../../assets/images/curse2.jpg">
-      <mat-card-content>
-        <h2>Bootstrap 5 Completo</h2>
-        <p>Aprenda a linguagem de marcação que é a estrutura de todo o site e aplicação web.</p>
-        <p>Neste curso você irá desenvolver sites estáticos, aprendendo as tags semânticas.</p>
-        <ul>
-          <li>Tipo: Avançado completo</li>
-          <li>Players: Áudio e Video</li>
-          <li>Duração: 17Horas</li>
-          <li>Valor: R$ 350,00</li>
-        </ul>
-      </mat-card-content>
-      <mat-card-actions>
-
-
-        <button (click)="abrirModalCurso()">Detalhes</button>
-        <button>Favorito</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile>
-    <mat-card>
-      <img class="img-card-home" mat-card-image src="../../assets/images/curse3.jpg">
-      <mat-card-content>
-        <h2>Spring Boot na Prática</h2>
-        <p>Aprenda a linguagem de marcação que é a estrutura de todo o site e aplicação web.</p>
-        <p>Neste curso você irá desenvolver sites estáticos, aprendendo as tags semânticas.</p>
-        <ul>
-          <li>Tipo: Avançado completo</li>
-          <li>Players: Áudio e Video</li>
-          <li>Duração: 36Horas</li>
-          <li>Valor: R$ 196,00</li>
-        </ul>
-      </mat-card-content>
-      <mat-card-actions>
-
-
-        <button (click)="abrirModalCurso()">Detalhes</button>
-        <button>Favorito</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile>
-    <mat-card>
-      <img class="img-card-home" mat-card-image src="../../assets/images/curse4.png">
-      <mat-card-content>
-        <h2>Inicie com Next.JS</h2>
-        <p>Aprenda a linguagem de marcação que é a estrutura de todo o site e aplicação web.</p>
-        <p>Neste curso você irá desenvolver sites estáticos, aprendendo as tags semânticas.</p>
-        <ul>
-          <li>Tipo: Avançado completo</li>
-          <li>Players: Áudio e Video</li>
-          <li>Duração: 36Horas</li>
-          <li>Valor: R$ 196,00</li>
-        </ul>
-      </mat-card-content>
-      <mat-card-actions>
-
-
-        <button (click)="abrirModalCurso()">Detalhes</button>
-        <button>Favorito</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile>
-    <mat-card>
-      <img class="img-card-home" mat-card-image src="../../assets/images/curse4.png">
-      <mat-card-content>
-        <h2>Inicie com Next.JS</h2>
-        <p>Aprenda a linguagem de marcação que é a estrutura de todo o site e aplicação web.</p>
-        <p>Neste curso você irá desenvolver sites estáticos, aprendendo as tags semânticas.</p>
-        <ul>
-          <li>Tipo: Avançado completo</li>
-          <li>Players: Áudio e Video</li>
-          <li>Duração: 36Horas</li>
-          <li>Valor: R$ 196,00</li>
-        </ul>
-      </mat-card-content>
-      <mat-card-actions>
-
-
-        <button (click)="abrirModalCurso()">Detalhes</button>
-        <button>Favorito</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile>
-    <mat-card>
-      <img class="img-card-home" mat-card-image src="../../assets/images/curse3.jpg">
-      <mat-card-content>
-        <h2>Spring Boot na Prática</h2>
-        <p>Aprenda a linguagem de marcação que é a estrutura de todo o site e aplicação web.</p>
-        <p>Neste curso você irá desenvolver sites estáticos, aprendendo as tags semânticas.</p>
-        <ul>
-          <li>Tipo: Avançado completo</li>
-          <li>Players: Áudio e Video</li>
-          <li>Duração: 36Horas</li>
-          <li>Valor: R$ 196,00</li>
-        </ul>
-      </mat-card-content>
-      <mat-card-actions>
-
-
-        <button (click)="abrirModalCurso()">Detalhes</button>
-        <button>Favorito</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile>
-    <mat-card>
-      <img class="img-card-home" mat-card-image src="../../assets/images/curse2.jpg">
-      <mat-card-content>
-        <h2>Bootstrap 5 Completo</h2>
-        <p>Aprenda a linguagem de marcação que é a estrutura de todo o site e aplicação web.</p>
-        <p>Neste curso você irá desenvolver sites estáticos, aprendendo as tags semânticas.</p>
-        <ul>
-          <li>Tipo: Avançado completo</li>
-          <li>Players: Áudio e Video</li>
-          <li>Duração: 17Horas</li>
-          <li>Valor: R$ 350,00</li>
-        </ul>
-      </mat-card-content>
-      <mat-card-actions>
-
-
-        <button (click)="abrirModalCurso()">Detalhes</button>
-        <button>Favorito</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-grid-tile>
-
-  <mat-grid-tile>
-    <mat-card>
-      <img class="img-card-home" mat-card-image src="../../assets/images/curse1.jpg">
-      <mat-card-content>
-        <h2>HTML do Zero ao Avançado</h2>
-        <p>Aprenda a linguagem de marcação que é a estrutura de todo o site e aplicação web.</p>
-        <p>Neste curso você irá desenvolver sites estáticos, aprendendo as tags semânticas.</p>
-        <ul>
-          <li>Tipo: Avançado completo</li>
-          <li>Players: Áudio e Video</li>
-          <li>Duração: 36Horas</li>
-          <li>Valor: R$ 196,00</li>
-        </ul>
-      </mat-card-content>
-      <mat-card-actions>
-
-
-        <button (click)="abrirModalCurso()">Detalhes</button>
-        <button>Favorito</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-grid-tile>
+</div>
 
 </mat-grid-list>
-
-
   <!-- Fim cards cursos -->
 </div>
->>>>>>> dd08b5fc5c7c96a830f8a1dac64400b0cf59f335
