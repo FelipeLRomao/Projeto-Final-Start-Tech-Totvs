@@ -1,5 +1,3 @@
-
-<h1>Teste Home</h1>
 <!-- INICIO CARROSSEL -->
 <div class="item" [style.backgroundImage]="'url(' + imagens[indexImagemAtiva] + ')'"></div>
 <!-- BOTÕES DE CONTROLE DO CARROSSEL -->
@@ -10,13 +8,33 @@
 <!--INICIO FAVORITOS-->
 <section id="cursos-favoritos">
 <h2>DESTAQUES DA SEMANA</h2>
+<mat-grid-list cols="4" rowHeight="3:4">
+  <div *ngFor="let curso of cursos; let i = index">
+  <mat-grid-tile *ngIf = "curso.favorito === true">
+    <mat-card>
+      <img class="img-card-home" mat-card-image src='{{curso.foto}}'>
+      <mat-card-content>
+        <h2>{{curso.name}}</h2>
+        <p class="descricao">{{curso.description}}</p>
+        <p class="preco">R$ {{curso.preco}}</p>
+        <p>Ref: {{curso.id}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button class="favorite" mat-button (click)="toogleFavorito(i)"> <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon></button>
+        <button (click)="abrirModalCurso()">Detalhes</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+  </div>
+</mat-grid-list>
 </section>
 
 <div class="container-cursos">
   <h2>TODOS OS CURSOS</h2>
+
 <!-- Cards de cursos inicio -->
   <mat-grid-list cols="4" rowHeight="3:4">
-  <div *ngFor="let curso of cursos">
+  <div *ngFor="let curso of cursos; let i = index">
   <mat-grid-tile>
     <mat-card>
       <img class="img-card-home" mat-card-image src='{{curso.foto}}'>
@@ -27,10 +45,8 @@
         <p>Ref: {{curso.id}}</p>
       </mat-card-content>
       <mat-card-actions>
-
-
+        <button class="favorite" mat-button (click)="toogleFavorito(i)"> <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon></button>
         <button (click)="abrirModalCurso()">Detalhes</button>
-        <button>Favorito</button>
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>
