@@ -1,1 +1,97 @@
+@import '../app.component.scss';
 
+.item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 850px;
+  transition: all 0.5s ease-in-out;
+}
+
+.botoes-controle {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.botoes-controle button {
+  background: #ccc;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+}
+
+.botoes-controle button.ativo {
+  background: #479BDB;
+  cursor: default;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+// Inicio CSS Cards com Material UI - Felipe Romão
+
+mat-grid-tile {
+  width: 1140px;
+   mat-card{
+    width: 100%;
+    margin: 20px;
+    gap: 5px;
+    border-radius: 15px;
+    box-shadow: $card-shadow;
+      .img-card-home{
+        border-radius: 0px 0px 50px 0px;
+        box-shadow: $card-shadow;
+        background-color: #fff;
+      }
+      h2{
+       padding: 20px;
+       color: $cor-secundaria;
+      }
+      p{
+        font-size: $media;
+        font-family: $fonte-secundaria;
+        text-align: justify;
+      }
+      ul{
+        margin-top: 10px;
+      }
+      li{
+        font-weight: 500;
+      }
+      mat-card-actions{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+          button{
+            padding: 15px;
+            border-radius: 25px;
+            font-size: $media;
+            border: none;
+            color: #fff;
+            text-shadow: $card-shadow;
+            background-image: linear-gradient(to right,  #7BDD88,#479BDB);
+            box-shadow: $card-shadow;
+            font-weight: 600;
+          &:hover{
+            transition: $card-transition;
+             background-image: linear-gradient(to right, #479BDB, #7BDD88);
+             color: $cinza-escuro;
+          }
+        }
+      }
+   &:hover{
+    transition: $card-transition;
+      box-shadow: $card-shadow-hover;
+   }
+  }
+}

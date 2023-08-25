@@ -3,19 +3,22 @@
 mat-toolbar {
     background-color: $preto;
     color: $branco;
+    overflow-y: hidden;
     .container {
         width: 1140px;
+        overflow-y: hidden;
         display: flex;
         margin: auto;
         h1 {
           background-image: linear-gradient(to right, #479BDB, #7BDD88);
           background-clip: text;
+          overflow-y: hidden;
           -webkit-background-clip: text;
           color: transparent;
             font-family: $fonte-principal;
             font-size: 50px;
             padding-top: 5px;
-            font-weight: bold; 
+            font-weight: bold;
         }
         .menu-spacer {
             flex: 1 1 auto;
@@ -25,7 +28,7 @@ mat-toolbar {
             &:hover {
               color:#479BDB;
             }
-            
+
         }
         .auth {
           background-image: linear-gradient(to right, #479BDB, #7BDD88);
@@ -40,8 +43,8 @@ mat-toolbar {
               transition: all .4s ease-in-out;
               color: $preto;
             }
-            
+
         }
     }
- 
+
 }
