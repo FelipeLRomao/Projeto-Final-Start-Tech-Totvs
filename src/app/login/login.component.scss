@@ -6,33 +6,31 @@
 }
 
 .container {
-    padding-bottom: 100px;
-
-    #image-intro {
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
+    background-image: url(https://i.ibb.co/zrpZv6K/fundo2.png);
 
     #loginPlace {
-        padding-bottom: 150px;
 
         mat-grid-tile {
-            padding-left: 200px;
-            height: 850px;
+            height: 800px;
+
+            mat-grid-tile-content {
+                margin-top: 0;
+            }
 
             mat-card {
-                margin-left: 200px;
+                background-color: white;
+                margin-left: 130px;
                 border-radius: 10px;
-                width: 500px;
-                border: 2px solid black;
+                width: 600px;
+                height: 700px;
+                border: 2px solid rgb(0, 162, 255);
 
                 mat-card-header {
                     h2 {
-                        margin-left: 35%;
+                        margin-left: 125px;
                         font-size: 50px;
-                        color: blue;
                         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                        text-shadow: 5px 5px 5px rgb(90, 90, 90);
+                        text-shadow: 1px 2px 2px rgb(0, 162, 255);
                         transform: text-shadow 2s;
 
                         &:hover {
@@ -52,59 +50,23 @@
 
                     h2 {
                         font-size: 50px;
-                        color: rgb(0, 52, 100);
+                        background-image: linear-gradient(to right, #479BDB, #7BDD88);
+                        background-clip: text;
+                        overflow-y: hidden;
+                        -webkit-background-clip: text;
+                        color: transparent;
                         text-align: center;
                         margin-top: 15px;
-                        text-shadow: 5px 5px 5px rgb(129, 129, 129);
-                        transform: text-shadow 2s;
                         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
                         &:hover {
-                            color: rgb(28, 28, 107);
+                            background-image: linear-gradient(to right, #7BDD88, #479BDB);
+                            background-clip: text;
+                            transform: text-shadow 2s;
+                            overflow-y: hidden;
+                            -webkit-background-clip: text;
+                            color: transparent;
                             cursor: context-menu;
-                            font-style: italic;
-                        }
-                    }
-
-                    #quem-somos {
-                        font-size: 50px;
-                        color: rgb(0, 60, 116);
-                        text-align: center;
-                        margin-top: 15px;
-                        text-shadow: 3px 3px 3px rgb(112, 112, 112);
-                        transform: text-shadow 2s;
-                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                    }
-
-                    article {
-                        text-align: center;
-                        font-size: 25px;
-
-                        &::first-letter {
-                            font-size: 30px;
-                            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                            font-style: italic;
-                        }
-                    }
-
-                    #imgQuemSomos {
-                        margin-top: 40px;
-                        margin-left: 40px;
-                        width: 400px;
-                        height: 200px;
-                    }
-
-                    .buttonTile {
-                        height: 300px;
-
-                        #likeBtn {
-                            border-radius: 10px;
-                            background-color: rgba(0, 185, 0, 0.747);
-                        }
-
-                        #unlikedBtn {
-                            border-radius: 10px;
-                            background-color: rgba(204, 0, 0, 0.733);
                         }
                     }
 
@@ -115,37 +77,52 @@
                         h3 {
                             font-size: 25px;
                             margin-top: 20px;
-                            margin-bottom: 10px;
                             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                             cursor: default;
                         }
 
                         input {
+                            border-radius: 3.5px;
+                            border: 2px solid black;
                             font-size: 15px;
-                            text-align: left;
                             width: 90%;
-                            height: 30px;
+                            height: 50px;
                             font-style: italic
+                        }
+
+                        #changePassword {
+                            &:hover {
+                                text-decoration: underline;
+                            }
                         }
 
                         a {
                             text-decoration: none;
+                            color: blue;
 
-                            &:hover {
-                                text-decoration: underline
+                            &:hover{
+                                text-decoration: underline;
                             }
 
                         }
 
                         button {
-                            margin-left: 120px;
+                            border: 2px solid black;
+                            margin-left: 180px;
                             margin-top: 40px;
-                            background-color: green;
+                            background-image: linear-gradient(to right, #479BDB, #7BDD88);
                             width: 150px;
+
+                            &:hover {
+                                background-image: black;
+                            }
+
+                            a{
+                                color: black;
+                            }
 
                         }
                     }
-
 
                     .example-form {
                         min-width: 150px;

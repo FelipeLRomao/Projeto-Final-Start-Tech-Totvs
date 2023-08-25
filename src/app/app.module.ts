@@ -32,7 +32,7 @@ import { LiveFormDialogComponent } from './live-form-dialog/live-form-dialog.com
     CursosComponent,
     FooterComponent,
     LiveFormDialogComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +49,7 @@ import { LiveFormDialogComponent } from './live-form-dialog/live-form-dialog.com
     MatDialogModule,
     MatTooltipModule,
     MatTabsModule,
-    MatCardModule
+    MatCardModule,
 
   ],
   providers:[],

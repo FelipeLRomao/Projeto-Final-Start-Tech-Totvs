@@ -2,11 +2,9 @@
 
 
 footer {
+    min-height: calc(100vh - 670px);
     
     .container {
-        margin-bottom: 0;
-        margin-top: 100px;
-        height: 275px;
         width: 100%;
         background-image: linear-gradient(to right, #479BDB, #7BDD88);
         color: white;
@@ -20,7 +18,7 @@ footer {
                     color: white;
 
                     span {
-                        font-size: 18px;
+                        font-size: 21px;
                     }
                 }
             }
