@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component,ViewEncapsulation } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+
+  nome: string = '';
+  username = '';
+  password =  '';
+  confirmPassword: string = '';
+
+  loggedIn = false;
+
 
 }

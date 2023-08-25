@@ -1,25 +1,22 @@
 <div class="container">
-    <section id="image-intro"></section>
     <section id="loginPlace">
-        <br>
-        <mat-grid-list cols="1" rowHeight="2:1" style="margin-right: 50px;">
+        <mat-grid-list cols="1" rowHeight="10:7" style="margin-right: 50px;">
             <mat-grid-tile>
                 <mat-card>
                     <mat-card-content>
                         <mat-card-header>
-                            <h2>Início</h2>
+                            <h2>CodeCreators</h2>
                         </mat-card-header>
-                        <br>
                         <hr>
                         <mat-tab-group>
                             <mat-tab label="Login" id="loginLabel">
                                 <h2>Login</h2>
                                 <form action="">
-                                    <h3>Digite seu e-mail</h3>
-                                    <input type="email" id="inputName" placeholder=" Digite seu e-mail..."><br>
+                                    <h3>E-mail ou usuário :</h3>
+                                    <input type="email" id="inputName" placeholder=" Digite seu e-mail ou usuário..." required><br>
                                     <h3>Senha :</h3>
-                                    <input type="password" placeholder=" Digite sua senha..."><br><br>
-                                    <a href="#">Esqueci minha senha...</a>
+                                    <input type="password" placeholder=" Digite sua senha..." required><br><br>
+                                    <a href="#" id="changePassword">Esqueci minha senha...</a>
                                     <div class="example-button-row">
                                         <button mat-fab extended color="primary">
                                             <a>✔️ Entrar</a>
@@ -31,9 +28,9 @@
                                 <h2>Cadastro</h2>
                                 <form action="">
                                     <h3>Digite seu e-mail</h3>
-                                    <input type="email" id="inputName" placeholder=" Digite seu e-mail..."><br>
+                                    <input type="email" id="inputName" placeholder=" Digite seu e-mail..." required><br>
                                     <h3>Senha :</h3>
-                                    <input type="password" placeholder=" Digite sua senha..."><br><br>
+                                    <input type="password" placeholder=" Digite sua senha..." required><br><br>
                                     <div class="example-button-row">
                                         <button mat-fab extended color="primary">
                                             <a>✔️ Finalizar</a>
