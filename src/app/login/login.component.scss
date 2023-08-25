@@ -90,6 +90,15 @@
                             font-style: italic
                         }
 
+                        select{
+                            border-radius: 3.5px;
+                            border: 2px solid black;
+                            font-size: 15px;
+                            width: 90%;
+                            height: 50px;
+                            font-style: italic
+                        }
+
                         #changePassword {
                             &:hover {
                                 text-decoration: underline;
@@ -115,10 +124,12 @@
 
                             &:hover {
                                 background-image: linear-gradient(to right, #7BDD88, #479BDB);
+                                transition: background-image 1s;
                             }
 
                             a{
                                 color: black;
+                                text-decoration: none;
                             }
 
                         }
