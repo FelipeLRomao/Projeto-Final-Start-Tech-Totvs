@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { PoModule } from '@po-ui/ng-components';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 //MATERIAL UI
 import {MatCardModule} from '@angular/material/card';
@@ -24,7 +25,11 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { LiveFormDialogComponent } from './live-form-dialog/live-form-dialog.component';
+<<<<<<< HEAD
 import { DetalhesComponent } from './detalhes/detalhes.component';
+=======
+import { AuthService } from './auth.service';
+>>>>>>> 13970a92b15acfa542ecb09a18d7dc846884db75
 
 @NgModule({
   declarations: [
@@ -48,13 +53,17 @@ import { DetalhesComponent } from './detalhes/detalhes.component';
     MatToolbarModule,
     MatGridListModule,
     NgFor,
+    NgIf,
     MatDialogModule,
     MatTooltipModule,
     MatTabsModule,
     MatCardModule,
+    ReactiveFormsModule
 
   ],
-  providers:[],
+  providers:[
+    [AuthService]
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
