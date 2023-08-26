@@ -24,6 +24,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { LiveFormDialogComponent } from './live-form-dialog/live-form-dialog.component';
+import { DetalhesComponent } from './detalhes/detalhes.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { LiveFormDialogComponent } from './live-form-dialog/live-form-dialog.com
     FooterComponent,
     LiveFormDialogComponent,
     LoginComponent,
+    DetalhesComponent,
   ],
   imports: [
     BrowserModule,

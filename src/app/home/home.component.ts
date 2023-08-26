@@ -26,6 +26,12 @@ export class HomeComponent implements OnInit, OnDestroy {
     private http: HttpClient
     ) {}
 
+//Detalhes
+
+verDetalhes(cursoId: string){
+  this.router.navigate(['/detalhes', cursoId])
+}
+
    // Função de Favoritar
    toogleFavorito(index: number): void{
     this.cursos[index].favorito = !this.cursos[index].favorito
