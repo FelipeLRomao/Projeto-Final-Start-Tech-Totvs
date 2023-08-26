@@ -25,11 +25,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { LiveFormDialogComponent } from './live-form-dialog/live-form-dialog.component';
-<<<<<<< HEAD
 import { DetalhesComponent } from './detalhes/detalhes.component';
-=======
 import { AuthService } from './auth.service';
->>>>>>> 13970a92b15acfa542ecb09a18d7dc846884db75
+
 
 @NgModule({
   declarations: [

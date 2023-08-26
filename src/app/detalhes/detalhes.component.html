@@ -1,1 +1,8 @@
-<p>detalhes works!</p>
+<div class="container">
+  <h2>Conheça Melhor o curso {{cursos.name}}</h2>
+  <section class="product-details" *ngFor="let curso of cursos; let i = index">
+    <img src="{{curso.foto}}" alt="Foto de {{curso.name}}" />
+    <div class="product-description">
+
+    </div>
+

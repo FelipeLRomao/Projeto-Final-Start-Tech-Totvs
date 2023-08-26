@@ -37,7 +37,7 @@
   <div *ngFor="let curso of cursos; let i = index">
   <mat-grid-tile>
     <mat-card>
-      <img class="img-card-home" mat-card-image src='{{curso.foto}}'>
+      <img  class="img-card-home" mat-card-image src='{{curso.foto}}'>
       <mat-card-content>
         <h2>{{curso.name}}</h2>
         <p class="descricao">{{curso.description}}</p>
@@ -46,7 +46,7 @@
       </mat-card-content>
       <mat-card-actions>
         <button class="favorite" mat-button (click)="toogleFavorito(i)"> <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon></button>
-        <button (click)="abrirModalCurso()">Detalhes</button>
+        <button mat-button (click)="abrirModalCurso()">Detalhes</button>
       </mat-card-actions>
     </mat-card>
   </mat-grid-tile>

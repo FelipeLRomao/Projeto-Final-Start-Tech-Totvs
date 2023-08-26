@@ -22,14 +22,15 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   constructor(
+    private router: Router,
     public dialog: MatDialog,
     private http: HttpClient
     ) {}
 
 //Detalhes
 
-verDetalhes(cursoId: string){
-  this.router.navigate(['/detalhes', cursoId])
+verDetalhe(cursoId: string){
+  this.router.navigate(['/detalhes', cursoId]);
 }
 
    // Função de Favoritar
