@@ -9,25 +9,20 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetalhesComponent  implements OnInit {
 
-  cursoId: string | undefined;
-
-  //  json cursos
-  cursos: any;
+  cursoId!: string;
+  curso: any;
 
   constructor(
     private router: ActivatedRoute,
     private http: HttpClient
-
-    ) {}
+    ) { }
 
     ngOnInit(): void {
       this.router.paramMap.subscribe(params => {
         this.cursoId = params.get('id') ?? '';
+        this.http.get<any>('http://localhost:3000/cursos/' + this.cursoId).subscribe(data => {
+          this.curso = data;
+        });
       });
-
-      //rota do json cursos
-      this.http.get<any>('http://localhost:3000/cursos').subscribe(data => {
-        this.cursos = data;
-      });
-     }
+    }
 }

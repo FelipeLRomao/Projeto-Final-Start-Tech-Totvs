@@ -7,27 +7,21 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
-  redesSociais: Array<any> = [
+  title: string = 'CodeCreators';
+  copyright: string = 'Desenvolvido em 2023';
+  developer: string = 'Start <Tech> TOTVS';
+  
+redesSociais: Array<any> = [
     {
-      app: "Facebook",
-      link: "https://www.facebook.com/",
-      icone: "https://i.ibb.co/SskNHd7/facebook-logo.png"
+      nome: 'Facebook',
+      link: 'http://www.facebook.com',
+      icone: 'https://i.ibb.co/LZYBg8Q/logotipo-circular-do-facebook.png'
     },
     {
-      app: "Twitter",
-      link: "https://twitter.com/",
-      icone: "https://i.ibb.co/QvybzcK/twitter-logo.png"
+      nome: 'Instagram',
+      link: 'http://www.instagram.com',
+      icone: 'https://i.ibb.co/0nNbcgS/instagram-1.png'
     },
-    {
-      app: "Instagram",
-      link: "https://www.instagram.com/",
-      icone: "https://i.ibb.co/N3DrdBr/instagram-image.png"
-    },
-    {
-      app: "GitHub",
-      link: "https://github.com/FelipeLRomao/Projeto-Final-Start-Tech-Totvs",
-      icone: "https://i.ibb.co/jHBk9BY/github-logo.jpg"
-    }
-  ];
-
+  ]
+  
 }

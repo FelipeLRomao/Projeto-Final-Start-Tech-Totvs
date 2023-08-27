@@ -5,7 +5,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
-import { CursosComponent } from './cursos/cursos.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 
@@ -27,13 +26,12 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { LiveFormDialogComponent } from './live-form-dialog/live-form-dialog.component';
 import { DetalhesComponent } from './detalhes/detalhes.component';
 import { AuthService } from './auth.service';
-
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabecalhoComponent,
-    CursosComponent,
     FooterComponent,
     LiveFormDialogComponent,
     LoginComponent,
@@ -56,8 +54,8 @@ import { AuthService } from './auth.service';
     MatTooltipModule,
     MatTabsModule,
     MatCardModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   providers:[
     [AuthService]

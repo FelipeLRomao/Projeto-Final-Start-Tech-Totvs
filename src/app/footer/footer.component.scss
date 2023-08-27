@@ -2,27 +2,29 @@
 
 
 footer {
-    min-height: calc(100vh - 670px);
+    min-height: calc(100vh - 1000px);
     
     .container {
+        display: flex;
         width: 100%;
+        height: 60px;
+        padding-top: 5px;
         background-image: linear-gradient(to right, #479BDB, #7BDD88);
         color: white;
-
-        ul {
-            padding-right: 100px;
-
-            li {
-                a {
-                    text-decoration: none;
-                    color: white;
-
-                    span {
-                        font-size: 21px;
-                    }
-                }
-            }
-        }
+        overflow-y: hidden;
+    .div-icons{
+        filter: invert(100%);
+        margin-top: 5px;
+        margin-right: 10px; 
+        margin-left: 5px;
+        overflow-y: hidden;
     }
-
+    .texto-rodape{
+        //margin: auto;
+        padding-top: 10px;
+        padding-left: 19%;
+        padding-right: 32%;
+        overflow-y: hidden;
+    }
+}
 }

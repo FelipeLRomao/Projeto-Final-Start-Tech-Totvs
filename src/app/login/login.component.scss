@@ -4,12 +4,8 @@
     margin: 0;
     padding: 0;
 }
-
 .container {
-    background-image: url(https://i.ibb.co/zrpZv6K/fundo2.png);
-
     #loginPlace {
-
         mat-grid-tile {
             height: 800px;
 
@@ -75,15 +71,14 @@
                         padding-bottom: 40px;
 
                         h3 {
-                            font-size: 25px;
-                            margin-top: 20px;
+                            font-size: 20px;
+                            margin-top: 10px;
                             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                             cursor: default;
                         }
 
                         input {
                             border-radius: 3.5px;
-                            border: 2px solid black;
                             font-size: 15px;
                             width: 90%;
                             height: 50px;
@@ -116,9 +111,8 @@
                         }
 
                         button {
-                            border: 2px solid black;
                             margin-left: 180px;
-                            margin-top: 40px;
+                            margin-top: 50px;
                             background-image: linear-gradient(to right, #479BDB, #7BDD88);
                             width: 150px;
 

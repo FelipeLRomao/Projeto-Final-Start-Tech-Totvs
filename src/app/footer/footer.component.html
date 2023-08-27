@@ -1,18 +1,10 @@
 <footer>
     <div class="container">
-    <mat-grid-list cols="4" rowHeight="6:5">
-        <mat-grid-tile>
-            <ul type="none">
-                <li *ngFor="let redeSocial of redesSociais">
-                    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-                        <img [src]="redeSocial.icone" alt="">
-                    </button>
-                    <a [href]="redeSocial.link">
-                        <span>{{redeSocial.app}}</span>
-                    </a>
-                </li>
-            </ul>
-        </mat-grid-tile>
-    </mat-grid-list>
+        <div class="texto-rodape">
+        <p>&copy; {{ title }} | {{copyright}} - {{developer}}.</p>
+        </div>
+        <div class="div-icons" *ngFor="let icon of redesSociais">
+            <a href= {{icon.link}} target="_blank"><img class="icons" mat-card-image [src]="icon.icone" [alt]="icon.nome"></a>
+        </div>
     </div>
 </footer>

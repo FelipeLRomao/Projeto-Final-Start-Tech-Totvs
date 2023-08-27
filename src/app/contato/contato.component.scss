@@ -4,13 +4,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    padding: 40px;
-    background-image: url(https://i.ibb.co/zrpZv6K/fundo2.png);
+    padding: 20px;
   }
   .container{
     max-width: 800px;
-    background: #fff;
+    background: #ffffffe1;
     width: 800px;
     padding: 40px 60px 40px 60px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
@@ -41,8 +39,7 @@
   form .form-row .textarea{
     height: 70px;
   }
-  .input-data input,
-  .textarea textarea{
+  .input-data input, .textarea textarea{
     display: block;
     width: 100%;
     height: 100%;
@@ -70,7 +67,7 @@
   .textarea label{
     width: 100%;
     bottom: 40px;
-    background: #fff;
+    background: #ffffffe1;
   }
   .input-data .underline{
     position: absolute;
@@ -121,6 +118,10 @@
     cursor: pointer;
     position: relative;
     z-index: 2;
+  }
+
+  .mat-label{
+    background-color: #ffffffe1;
   }
   @media (max-width: 700px) {
     .container .text{

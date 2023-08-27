@@ -28,7 +28,7 @@ export class ContatoComponent {
   mensagem = new FormControl('', [Validators.required, Validators.minLength(6)]);
 
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
-  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   constructor (
     private http: HttpClient,

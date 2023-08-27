@@ -1,0 +1,55 @@
+@import "../app.component.scss";
+
+.container {
+    width: 1140px;
+    min-height: calc(100vh - 130px);
+    display: block;
+    margin: auto;
+    h2 {
+        text-align: center;
+        font-size: 80px;
+        line-height: $extra-grande;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        color: $branco;
+    }
+    .product-details {
+        display: flex;
+        gap: 30px;
+        img {
+            width: 100%;
+        }
+        .product-description {
+            width: 100%;
+            p {
+                font-family: $fonte-secundaria;
+                color: $branco;
+                font-size: $media;
+                line-height: $grande;
+                text-align: justify;
+
+            }
+        }
+    }
+    h3{
+        font-size: 80px;
+        text-align: center;
+        font-weight: bold;
+        color: yellow;
+    }
+
+    button{
+        display: flex;
+        justify-content: center;
+        margin-left: 75px;
+        padding: 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: $extra-grande;
+        background-color: yellow;
+        cursor: pointer;
+        &:hover{
+            background-color:#ccc;
+        }
+    }
+}

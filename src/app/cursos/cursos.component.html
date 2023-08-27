@@ -1,1 +1,25 @@
-<p>cursos works!</p>
+<div class="container-cursos">
+  <h2>CONFIRA TODOS NOSSOS CURSOS</h2>
+  <mat-grid-list cols="4" rowHeight="3:5">
+  <div *ngFor="let curso of cursos; let i = index">
+  <mat-grid-tile>
+    <mat-card>
+      <img  class="img-card-home" mat-card-image src='{{curso.foto}}'>
+      <mat-card-content>
+        <h3 class="nomeCurso">{{curso.name}}</h3>
+        <p class="descricao">{{curso.description}}</p>
+        <p class="preco">R$ {{curso.preco}}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button id="fav"
+        [class]="(curso.favorito === false ? 'favorite' : 'favorite-checked')"
+                            [title]="(curso.favorito === false ? 'Adicionar aos Favoritos' : 'Remover dos favoritos')"
+                            (click)="toggleFavorito(curso.id)">
+                            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon>
+      </button>
+        <button mat-button (click)="verDetalhe(curso.id)">Detalhes</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</div>
+</mat-grid-list>

@@ -1,57 +1,167 @@
-<!-- INICIO CARROSSEL -->
-<div class="item" [style.backgroundImage]="'url(' + imagens[indexImagemAtiva] + ')'"></div>
-<!-- BOTÕES DE CONTROLE DO CARROSSEL -->
-<div class="botoes-controle">
-  <button *ngFor="let imagem of imagens; index as i"[class.ativo]="i === indexImagemAtiva"(click)="pararTimer(); ativarImagem(i)"></button></div>
-<img *ngFor="let imagem of imagens" [src]="imagem" width="1" height="1" style="opacity: 0; position: fixed"/>
-<!----------------FIM CARROSSEL---------------->
-<!--INICIO FAVORITOS-->
-<section id="cursos-favoritos">
-<h2>DESTAQUES DA SEMANA</h2>
-<mat-grid-list cols="4" rowHeight="3:4">
-  <div *ngFor="let curso of cursos; let i = index">
-  <mat-grid-tile *ngIf = "curso.favorito === true">
-    <mat-card>
-      <img class="img-card-home" mat-card-image src='{{curso.foto}}'>
-      <mat-card-content>
-        <h2>{{curso.name}}</h2>
-        <p class="descricao">{{curso.description}}</p>
-        <p class="preco">R$ {{curso.preco}}</p>
-        <p>Ref: {{curso.id}}</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button class="favorite" mat-button (click)="toogleFavorito(i)"> <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon></button>
-        <button (click)="abrirModalCurso()">Detalhes</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-grid-tile>
+<!--INTRODUÇÃO IMAGEM/TEXTO-->
+<img class="codecreators" src="https://i.ibb.co/HGsWvpH/Design-sem-nome-2.png" alt="">
+<div class="container">
+  <section>
+    <h2>Os cursos oferecidos na CodeCreators são voltados para o desenvolvimento web e divididos em duas categorias: Front End e Back End. Abaixo estão os principais cursos.</h2>
+  </section>
+<!--FIM INTRODUÇÃO-->
+
+<!--GRID/ FRONT E BACK END-->
+<!--FRONT END-->
+  <div class="cursod">
+    <div class="cursod_section">
+      <img class="cursod_title" src="https://www.origamid.com/wp-content/themes/origamid_theme/img/svg/frontend.svg" alt="Front End">
+      <ul class="cursod_list">
+        <li class="cursod_item active">
+          <h3>HTML e CSS para Iniciantes</h3>
+          <p>Ensinando do zero | 164 aulas | 23 horas | Certificado de Conclusão | Suporte para Dúvidas</p>   
+        </li>
+        <li class="cursod_item active">
+          <h3>JavaScript Completo ES6</h3>
+          <p>Ensinando do zero | 156 aulas | 37 horas | Certificado de Conclusão | Suporte para Dúvidas</p>
+        </li>
+        <li class="cursod_item">
+          <h3>Angular para Iniciantes</h3>
+          <p>Ensinando do zero | 155 aulas | 28 horas | Certificado de Conclusão | Suporte para Dúvidas</p>
+        </li>
+        <li class="cursod_item">
+          <h3>TypeScript para Iniciantes</h3>
+          <p>Ensinando do zero | 74 aulas | 11 horas | Certificado de Conclusão | Suporte para Dúvidas</p>
+        </li>
+        <li class="cursod_item">
+          <h3>React Completo</h3>
+          <p>Ensinando do zero | 108 aulas | 18 horas | Certificado de Conclusão | Suporte para Dúvidas</p>
+        </li>
+      </ul>
+    </div>
+  <!--BACK END-->
+    <div class="cursod_section">
+      <img class="cursod_title" src="https://www.origamid.com/wp-content/themes/origamid_theme/img/svg/uidesign.svg" alt="UI Design">
+      <ul class="cursod_list">
+        <li class="cursod_item active">
+          <h3>Python Completo</h3>
+          <p>Ensinando do zero | 170 aulas | 50 horas | Certificado de Conclusão | Suporte para Dúvidas</p>
+        </li>
+        <li class="cursod_item active">
+          <h3>Java</h3> 
+          <p>Ensinando do zero | 200 aulas | 90 horas | Certificado de Conclusão | Suporte para Dúvidas</p>          
+        </li>
+        <li class="cursod_item">
+          <h3>Introdução ao NodeJs</h3>
+          <p>Ensinando do zero | 80 aulas | 25 horas | Certificado de Conclusão | Suporte para Dúvidas</p>          
+        </li>
+        <li class="cursod_item">
+          <h3>Banco de dados SQL</h3>
+          <p>Ensinando do zero | 125 aulas | 70 horas | Certificado de Conclusão | Suporte para Dúvidas</p>
+        </li>
+        <li class="cursod_item">
+          <h3>QA - Testes Automatizados</h3>
+          <p>Ensinando do zero | 65 aulas | 25 horas | Certificado de Conclusão | Suporte para Dúvidas</p>
+        </li>
+    </ul>
+    </div>
   </div>
-</mat-grid-list>
-</section>
+</div>
+<!--FIM FRONT E BACK END-->
 
+<!--CURSOS MAIS PROCURADOS-->
+<div class="fundo-cursos">
 <div class="container-cursos">
-  <h2>TODOS OS CURSOS</h2>
-
-<!-- Cards de cursos inicio -->
-  <mat-grid-list cols="4" rowHeight="3:4">
-  <div *ngFor="let curso of cursos; let i = index">
-  <mat-grid-tile>
-    <mat-card>
-      <img  class="img-card-home" mat-card-image src='{{curso.foto}}'>
-      <mat-card-content>
-        <h2>{{curso.name}}</h2>
-        <p class="descricao">{{curso.description}}</p>
-        <p class="preco">R$ {{curso.preco}}</p>
-        <p>Ref: {{curso.id}}</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button class="favorite" mat-button (click)="toogleFavorito(i)"> <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon></button>
-        <button mat-button (click)="abrirModalCurso()">Detalhes</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-grid-tile>
+  <h2>CURSOS MAIS PROCURADOS</h2>
+  <a class="todosCursos" href="cursos">CONHEÇA TODOS OS CURSOS</a>
+  <section>
+    <mat-grid-list cols="4" rowHeight="3:6">
+      <div *ngFor="let curso of cursos; let i = index">
+        <mat-grid-tile *ngIf = "curso.favorito === true">
+          <mat-card>
+            <img class="img-card-home" mat-card-image src='{{curso.foto}}'>
+              <mat-card-content>
+                <h2>{{curso.name}}</h2>
+                <p class="descricao">{{curso.description}}</p>
+                <p class="preco">R$ {{curso.preco}}</p>
+                <p>Ref: {{curso.id}}</p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button id="fav"[class]="(curso.favorito === false ? 'favorite' : 'favorite-checked')"
+                [title]="(curso.favorito === false ? 'Adicionar aos Favoritos' : 'Remover dos favoritos')"
+                (click)="toggleFavorito(curso.id)">
+                <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon></button>
+                <button mat-button (click)="abrirModalCurso()">Mais detalhes</button> 
+              </mat-card-actions>
+          </mat-card>
+        </mat-grid-tile>
+      </div>
+    </mat-grid-list>
+  </section> 
 </div>
-
-</mat-grid-list>
-  <!-- Fim cards cursos -->
 </div>
+<!--FIM CURSOS MAIS PROCURADOS-->
+
+<!--PROJETOS DOS CURSOS -->
+<div class="container">
+<h2>PROJETOS DOS CURSOS</h2>
+  <!-- INICIO CARROSSEL -->
+  <div class="item" [style.backgroundImage]="'url(' + imagens[indexImagemAtiva] + ')'"></div>
+  <!-- BOTÕES DE CONTROLE DO CARROSSEL -->
+  <div class="botoes-controle">
+    <button *ngFor="let imagem of imagens; index as i"[class.ativo]="i === indexImagemAtiva"(click)="pararTimer(); ativarImagem(i)"></button>
+  </div>
+    <img *ngFor="let imagem of imagens" [src]="imagem" width="1" height="1" style="opacity: 0; position: fixed"/>
+</div>
+<!--FIM DOS PROJETOS-->
+
+<!--DEPOIMENTOS DOS USUÁRIOS-->
+<div class="container">
+  <h2>DEPOIMENTOS</h2>
+    <mat-grid-list cols="4" rowHeight="1:1">
+      <mat-grid-tile>
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Mayla</mat-card-title>
+            <mat-card-subtitle>Angular para Iniciantes</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit est, culpa mollitia repudiandae suscipit adipisci corporis eaque necessitatibus odio a</p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Ana Karina</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit est, culpa mollitia repudiandae suscipit adipisci corporis eaque necessitatibus odio a</p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Brigit Daniela</mat-card-title>
+            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+          </mat-card-header>
+          <mat-card-content>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit est, culpa mollitia repudiandae suscipit adipisci corporis eaque necessitatibus odio a</p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Felipe</mat-card-title>
+              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit est, culpa mollitia repudiandae suscipit adipisci corporis eaque necessitatibus odio a</p>
+            </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+</div>
+<!--FIM DEPOIMENTOS-->

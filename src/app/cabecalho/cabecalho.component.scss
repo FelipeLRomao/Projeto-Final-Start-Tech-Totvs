@@ -2,6 +2,7 @@
 
 mat-toolbar {
     background-color: $preto;
+    padding: 10px;
     color: $branco;
     overflow-y: hidden;
     .container {
@@ -15,16 +16,19 @@ mat-toolbar {
           overflow-y: hidden;
           -webkit-background-clip: text;
           color: transparent;
-            font-family: $fonte-principal;
-            font-size: 50px;
-            padding-top: 5px;
-            font-weight: bold;
+          font-family: $fonte-principal;
+          font-size: 50px;
+          padding-top: 5px;
+          font-weight: bold;
+          cursor: pointer;
         }
         .menu-spacer {
             flex: 1 1 auto;
         }
         button {
             margin-top: 5px;
+            padding: 10px;
+            font-size: $media ;
             &:hover {
               color:#479BDB;
             }
@@ -34,6 +38,7 @@ mat-toolbar {
           background-image: linear-gradient(to right, #479BDB, #7BDD88);
             color: $branco;
             margin-left: 30px;
+            margin-bottom: 10px;
             padding: 10px 10px;
             border-radius: 30px;
             transition: background-color 1s;

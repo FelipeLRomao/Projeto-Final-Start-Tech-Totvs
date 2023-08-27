@@ -1,57 +1,96 @@
 @import '../app.component.scss';
-
-.item {
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 850px;
-  transition: all 0.5s ease-in-out;
+// imagem logo codecreators 
+.codecreators{
+  width: 100%;
 }
-
-.botoes-controle {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 8px;
-}
-
-.botoes-controle button {
-  background: #ccc;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  height: 12px;
-  width: 12px;
-}
-
-.botoes-controle button.ativo {
-  background: #479BDB;
-  cursor: default;
-}
-
-.example-card {
-  max-width: 400px;
-}
-
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-  background-size: cover;
-}
-
-// Inicio CSS Cards com Material UI - Felipe Romão
-mat-grid-list{
- display: flex;
- justify-content: space-around;
-}
-mat-grid-tile {
+.container{
   width: 1140px;
-   mat-card{
-    width: 60%;
-    border-radius: 40px 0px;
+  display: block;
+  margin: auto;
+}
+
+//todos os títulos.
+h2{
+  color: $branco;
+  text-align: center;
+  font-size: 35px;
+  padding: 20px;
+}
+
+//front e back end - grid
+.cursod {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  transition: .3s;
+  &:hover{
+    gap: 2rem;
+  }
+}
+.cursod_title {
+  display: block;
+  margin: 0 auto 4rem auto;
+}
+.cursod_section {
+  padding: 2rem 0;
+}
+.cursod_item {
+  background-color: #202020;
+  border-radius: 3px;
+  border: 1px solid #479BDB;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 2px 3px 0 rgb(0 0 0 / 50%);
+  padding: 0 1rem 1rem 1rem;
+  transition: .3s;
+  &:hover{
+    background-color: #000;
+  }
+}
+.cursod_item h3, p{
+  color: $branco;
+  text-align: center;
+  text-decoration: none;
+}
+
+//cursos mais procurados
+.container-cursos{
+  width: 1140px;
+  display:grid;
+  margin: auto;
+}
+.fundo-cursos{
+  background-color: #181717;
+}
+
+//botão para todos os cursos
+.todosCursos{
+  text-decoration: none;
+  color: $preto;
+  text-align: center;
+  border: 1px solid $preto;
+  border-radius: 3px;
+  background-image: linear-gradient(to right,  #7BDD88,#479BDB);
+  &:hover{
+    transition: $card-transition;
     box-shadow: $card-shadow;
+    color: $branco;
+  }
+}
+
+//cursos mais procurados + depoimentos(cards)
+mat-grid-tile {
+  color: $branco;
+   mat-card{
+    margin: 5px;
+    border-radius: 0px 0px;
+    box-shadow: $card-shadow;
+    background-color: #000;
       .img-card-home{
         border-radius: 0px 0px 50px 0px;
         box-shadow: $card-shadow;
-        background-color: #fff;
       }
       h2{
        padding: 20px;
@@ -61,12 +100,15 @@ mat-grid-tile {
         font-size: $media;
         font-family: $fonte-secundaria;
         text-align: justify;
+        color: $branco;
+      }
+      mat-card-content{
+        background-color: #000;
       }
       mat-card-actions{
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-around;
-        margin-bottom: 10px;
+        background-color: #000;
+        padding-bottom: 10px;
+            gap:5px;
           button{
             padding: 15px;
             border-radius: 25px;
@@ -82,15 +124,51 @@ mat-grid-tile {
              background-image: linear-gradient(to right, #479BDB, #7BDD88);
              color: $cinza-escuro;
           }
+          
         }
       }
    &:hover{
     transition: $card-transition;
-      box-shadow: $card-shadow-hover;
+    box-shadow: $card-shadow-hover;
    }
   }
-  img{
-    width: 100%;
-    height: 300px;
-  }
+  button {
+    cursor: pointer;
+  } 
+}
+
+//carrossel
+.item {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 850px;
+  transition: all 0.5s ease-in-out;
+}
+.botoes-controle {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 8px;
+}
+.botoes-controle button {
+  background: #ccc;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin-bottom: 30px;
+}
+.botoes-controle button.ativo {
+  background: #479BDB;
+  cursor: default;
+}
+
+//depoimentos
+.example-card {
+  max-width: 400px;
+}
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
 }

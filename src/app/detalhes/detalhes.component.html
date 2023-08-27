@@ -1,8 +1,14 @@
-<div class="container">
-  <h2>Conheça Melhor o curso {{cursos.name}}</h2>
-  <section class="product-details" *ngFor="let curso of cursos; let i = index">
-    <img src="{{curso.foto}}" alt="Foto de {{curso.name}}" />
-    <div class="product-description">
-
-    </div>
-
+<div class="container" *ngIf="curso !== undefined">
+  <h2>{{ curso.name }}</h2>
+  <section class="product-details">
+      <img [src]="curso.foto2" alt="Foto de {{ curso.titulo }}" />
+      <div class="product-description">         
+          <p>{{ curso.descricao1 }}</p><br>
+          <p>{{ curso.descricao2 }}</p><br>
+          <p>{{ curso.descricao3 }}</p><br>
+          <h3> {{ curso.preco }}</h3>
+          <button>COMPRAR ESTE CURSO</button>
+      </div>
+      
+  </section>
+</div>

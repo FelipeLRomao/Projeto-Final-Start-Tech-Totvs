@@ -1,13 +1,9 @@
 <div class="container" *ngIf="!loggedIn">
     <section id="loginPlace">
-        <mat-grid-list cols="1" rowHeight="10:7" style="margin-right: 50px;">
+        <mat-grid-list cols="1" rowHeight="16:7">
             <mat-grid-tile>
                 <mat-card>
                     <mat-card-content>
-                        <mat-card-header>
-                            <h2>CodeCreators</h2>
-                        </mat-card-header>
-                        <hr>
                         <mat-tab-group>
                             <mat-tab label="Login" id="loginLabel">
                                 <h2>Login</h2>
@@ -28,8 +24,8 @@
                             <mat-tab label="Cadastro">
                                 <h2>Cadastro</h2>
                                 <form action="">
-                                    <h3>Digite nome completo:</h3>
-                                    <input type="email" id="inputName" placeholder=" Digite seu e-mail..." required><br>
+                                    <h3>Nome Completo:</h3>
+                                    <input type="name" id="inputName" placeholder=" Digite seu nome..." required><br>
                                     <h3>Selecione sua idade</h3>
                                     <select id="fruits" name="fruits">
                                         <option value="textoDeFundo">Escolha sua idade...</option>
@@ -38,9 +34,9 @@
                                         <option value="idade">24 a 30 anos</option>
                                         <option value="idade">30+</option>
                                     </select>
-                                    <h3>Digite seu e-mail:</h3>
+                                    <h3>E-mail:</h3>
                                     <input type="email" id="inputName" placeholder=" Digite seu e-mail..." required><br>
-                                    <h3>Senha :</h3>
+                                    <h3>Senha:</h3>
                                     <input type="password" placeholder=" Digite sua senha..." required><br><br>
                                     <div class="example-button-row">
                                         <button mat-fab extended color="primary">
