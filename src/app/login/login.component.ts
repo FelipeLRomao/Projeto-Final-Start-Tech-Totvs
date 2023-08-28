@@ -24,11 +24,12 @@ import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition
 })
 export class LoginComponent {
 
-  name = '';
+  nome = '';
   email = '';
   idade = '';
   username = '';
   password =  '';
+  confirmPassword = '';
   loggedIn = false;
   horizontalPosition: MatSnackBarHorizontalPosition = 'end';
   verticalPosition: MatSnackBarVerticalPosition = 'top';

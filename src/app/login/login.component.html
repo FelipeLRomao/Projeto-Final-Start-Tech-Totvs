@@ -25,9 +25,9 @@
                                 <h2>Cadastro</h2>
                                 <form action="">
                                     <h3>Nome Completo:</h3>
-                                    <input type="name" id="inputName" placeholder=" Digite seu nome..." required><br>
+                                    <input [(ngModel)]="nome" type="name" id="inputName" placeholder=" Digite seu nome..." required><br>
                                     <h3>Selecione sua idade</h3>
-                                    <select id="idade" name="idade">
+                                    <select [(ngModel)]="idade" id="idade" name="idade">
                                         <option value="textoDeFundo">Escolha sua idade...</option>
                                         <option value="idade">15 a 18 anos</option>
                                         <option value="idade">18 a 24 anos</option>
@@ -35,9 +35,11 @@
                                         <option value="idade">30+</option>
                                     </select>
                                     <h3>E-mail:</h3>
-                                    <input type="email" id="inputName" placeholder=" Digite seu e-mail..." required><br>
+                                    <input [(ngModel)]="email" type="email" id="inputName" placeholder=" Digite seu e-mail..." required><br>
                                     <h3>Senha:</h3>
-                                    <input type="password" placeholder=" Digite sua senha..." required><br><br>
+                                    <input [(ngModel)]="password" type="password" placeholder=" Digite sua senha..." required><br><br>
+                                    <h3>Confirme sua senha</h3>
+                                    <input [(ngModel)]="confirmPassword" type="password" placeholder=" Digite sua senha..." required><br><br>
                                     <div class="example-button-row">
                                         <button (click)="afterCreateAccount()" mat-fab extended color="primary">
                                             <a>✔️ Finalizar</a>
