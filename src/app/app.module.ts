@@ -27,7 +27,7 @@ import { LiveFormDialogComponent } from './live-form-dialog/live-form-dialog.com
 import { DetalhesComponent } from './detalhes/detalhes.component';
 import { AuthService } from './auth.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { AdminComponent } from './admin/admin.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +37,6 @@ import { AdminComponent } from './admin/admin.component';
     LiveFormDialogComponent,
     LoginComponent,
     DetalhesComponent,
-    AdminComponent,
   ],
   imports: [
     BrowserModule,

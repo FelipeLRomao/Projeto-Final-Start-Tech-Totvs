@@ -10,7 +10,7 @@
       "descricao2": "",
       "descricao3": "",
       "preco": "159.80",
-      "favorito": true
+      "favorito": false
     },
     {
       "id": 2,
@@ -22,7 +22,7 @@
       "descricao2": "O foco é no aprendizado da linguagem, mas o principal local de aplicação será na web, através de manipulações do DOM e requisições via Fetch API.",
       "descricao3": "Esse não é um curso para quem deseja algo rápido, mas sim para quem deseja dominar a linguagem. O código ensinado utiliza todas as novidades das novas versões de JavaScript, como arrow functions, promises e mais.",
       "preco": "R$ 220.79",
-      "favorito": true
+      "favorito": false
     },
     {
       "id": 3,
@@ -34,7 +34,7 @@
       "descricao2": "",
       "descricao3": "",
       "preco": "275.20",
-      "favorito": true
+      "favorito": false
     },
     {
       "id": 4,
@@ -130,7 +130,7 @@
       "descricao2": "",
       "descricao3": "",
       "preco": "185.30",
-      "favorito": true
+      "favorito": false
     },
     {
       "id": 12,

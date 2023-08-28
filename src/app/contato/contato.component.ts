@@ -21,7 +21,7 @@ import {
 })
 
 export class ContatoComponent {
-  
+
   nome = new FormControl('', Validators.required);
   email = new FormControl('', [Validators.required, Validators.email]);
   assunto = new FormControl('');
@@ -32,7 +32,7 @@ export class ContatoComponent {
 
   constructor (
     private http: HttpClient,
-    private _snackBar: MatSnackBar  
+    private _snackBar: MatSnackBar
   ) {}
 
   getErrorMessage() {
@@ -72,7 +72,7 @@ export class ContatoComponent {
     };
 
     this.http.post(' http://localhost:3000/contato', formData, body)
-      .subscribe(
+    .subscribe(
         response => {
           // console.log('Formulário enviado com sucesso!');
           this._snackBar.open('Formulário enviado com sucesso!', 'Fechar', {
@@ -89,14 +89,14 @@ export class ContatoComponent {
               verticalPosition: this.verticalPosition,
               duration: 5000
             });
-          } 
+          }
           else {
             this._snackBar.open('Ocorreu um erro ao enviar a mensagem!', 'Fechar', {
               horizontalPosition: this.horizontalPosition,
               verticalPosition: this.verticalPosition,
               duration: 5000
             });
-          }         
+          }
         }
       );
   }
