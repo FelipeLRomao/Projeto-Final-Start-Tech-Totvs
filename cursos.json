@@ -1,18 +1,6 @@
 {
   "cursos": [
     {
-      "id": 1,
-      "name": "Python",
-      "description": "Começando com a linguagem",
-      "foto": "https://i.ibb.co/nRX9q0B/Python-logo-notext-svg.png",
-      "foto2": "",
-      "descricao1": "",
-      "descricao2": "",
-      "descricao3": "",
-      "preco": "159.80",
-      "favorito": false
-    },
-    {
       "id": 2,
       "name": "Javascript",
       "description": "Crie páginas dinâmicas",
@@ -169,18 +157,15 @@
     }
   ],
   "users": [
-    {
-      
-    }
+    {}
   ],
-
-  "dataBase" : [
+  "dataBase": [
     {
-      "exampleCourseName" : "StartTech",
-      "exampleCourseImage" : "img.jpg",
-      "exampleCourseDescription" : "csbcuybrscirsbcusdlbck",
-      "exampleQuantity" : "Courses Quantity"
+      "exampleCourseName": "StartTech",
+      "exampleCourseImage": "img.jpg",
+      "exampleCourseDescription": "csbcuybrscirsbcusdlbck",
+      "exampleQuantity": "Courses Quantity",
+      "CoursePrice": "39,90"
     }
-
   ]
 }

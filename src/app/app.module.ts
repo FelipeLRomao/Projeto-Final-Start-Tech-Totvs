@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { NgModel } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
