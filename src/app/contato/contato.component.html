@@ -7,14 +7,15 @@
                 <mat-label>Nome</mat-label>
                 <input class="input-data" matInput [formControl]="nome" required>
                 <mat-error *ngIf="nome.invalid">{{getErrorMessage()}}</mat-error>
-            
-            </mat-form-field>  
+            </mat-form-field>
+
             <mat-form-field class="form-row">
                 <div class="underline"></div>
                 <mat-label>E-mail</mat-label>
                 <input class="input-data" matInput [formControl]="email" required>
                 <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-            </mat-form-field> 
+            </mat-form-field>
+
             <mat-form-field class="form-row">
                 <div class="underline"></div>
                 <mat-label class="input-data">Assunto</mat-label>
@@ -24,12 +25,14 @@
                 <mat-option value="rh">Trabalhe Conosco</mat-option>
                 </mat-select>
             </mat-form-field>
+
             <mat-form-field class="form-row">
                 <div class="underline"></div>
                 <mat-label class="input-data">Digite sua mensagem</mat-label>
                 <textarea rows="3" cols="80" matInput  [formControl]="mensagem"></textarea>
                 <mat-error *ngIf="mensagem.invalid">{{getErrorMessage()}}</mat-error>
             </mat-form-field>
+
             <div class="form-row submit-btn">
                 <div class="input-data">
                     <div class="inner"></div>

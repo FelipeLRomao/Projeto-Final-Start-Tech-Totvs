@@ -30,6 +30,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { LiveFormDialogComponent } from './live-form-dialog/live-form-dialog.component';
 import { AuthService } from './auth.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+<<<<<<< HEAD
+=======
+
+>>>>>>> d4462d06aa3dc4b94ebdb796b73670c8989ab3f0
 
 @NgModule({
   declarations: [
@@ -38,7 +42,6 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     FooterComponent,
     LiveFormDialogComponent,
     DetalhesComponent,
-    AdminComponent,
   ],
   imports: [
     BrowserModule,
