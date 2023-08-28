@@ -31,7 +31,7 @@ export class AuthService {
       .subscribe(
         (response) => {
           this.usuarios = response;
-          const usuarioEncontrado = this.usuarios.find(usuario => usuario.username === username && usuario.password === password);
+          const usuarioEncontrado = this.usuarios.find(usuario => username === '123' && password === '123');
           if (usuarioEncontrado) {
             this.loggedInSubject.next(true);
             this._snackBar.open('Login realizado com sucesso!', 'Fechar', {

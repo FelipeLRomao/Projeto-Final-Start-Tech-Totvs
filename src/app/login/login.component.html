@@ -9,13 +9,13 @@
                                 <h2>Login</h2>
                                 <form action="">
                                     <h3>E-mail ou usuário :</h3>
-                                    <input type="email" id="inputName" placeholder=" Digite seu e-mail ou usuário..."
+                                    <input [(ngModel)]="username" type="email" id="inputName" placeholder=" Digite seu e-mail ou usuário..."
                                         required><br>
                                     <h3>Senha :</h3>
-                                    <input type="password" placeholder=" Digite sua senha..." required><br><br>
+                                    <input [(ngModel)]="password" type="password" placeholder=" Digite sua senha..." required><br><br>
                                     <a href="#" id="changePassword">Esqueci minha senha...</a>
                                     <div class="example-button-row">
-                                        <button mat-fab extended color="primary">
+                                        <button (click)="login()" mat-fab extended color="primary">
                                             <a>✔️ Entrar</a>
                                         </button>
                                     </div>
@@ -27,7 +27,7 @@
                                     <h3>Nome Completo:</h3>
                                     <input type="name" id="inputName" placeholder=" Digite seu nome..." required><br>
                                     <h3>Selecione sua idade</h3>
-                                    <select id="fruits" name="fruits">
+                                    <select id="idade" name="idade">
                                         <option value="textoDeFundo">Escolha sua idade...</option>
                                         <option value="idade">15 a 18 anos</option>
                                         <option value="idade">18 a 24 anos</option>
@@ -39,7 +39,7 @@
                                     <h3>Senha:</h3>
                                     <input type="password" placeholder=" Digite sua senha..." required><br><br>
                                     <div class="example-button-row">
-                                        <button mat-fab extended color="primary">
+                                        <button (click)="afterCreateAccount()" mat-fab extended color="primary">
                                             <a>✔️ Finalizar</a>
                                         </button>
                                     </div>
@@ -51,7 +51,4 @@
             </mat-grid-tile>
         </mat-grid-list>
     </section>
-</div>
-<div *ngIf="loggedIn">
-    <h1>teste</h1>
 </div>

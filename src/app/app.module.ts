@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { NgModel } from '@angular/forms';
 import { NgFor, NgIf } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,11 +8,14 @@ import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import { AdminComponent } from './admin/admin.component';
 
 import { PoModule } from '@po-ui/ng-components';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { DetalhesComponent } from './detalhes/detalhes.component';
 
 //MATERIAL UI
 import {MatCardModule} from '@angular/material/card';
@@ -24,10 +28,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { LiveFormDialogComponent } from './live-form-dialog/live-form-dialog.component';
-import { DetalhesComponent } from './detalhes/detalhes.component';
 import { AuthService } from './auth.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,6 @@ import { AdminComponent } from './admin/admin.component';
     CabecalhoComponent,
     FooterComponent,
     LiveFormDialogComponent,
-    LoginComponent,
     DetalhesComponent,
     AdminComponent,
   ],
@@ -57,7 +58,8 @@ import { AdminComponent } from './admin/admin.component';
     MatTabsModule,
     MatCardModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    FormsModule,
   ],
   providers:[
     [AuthService]

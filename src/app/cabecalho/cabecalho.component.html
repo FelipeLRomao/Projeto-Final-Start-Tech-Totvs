@@ -5,11 +5,11 @@
         <button class="" mat-button routerLink="/">Home</button>
         <button mat-button routerLink="cursos">Nossos Cursos</button>
         <button mat-button routerLink="contato">Contato</button>
-        <button class="auth" mat-button  routerLink="login" *ngIf="!loggedIn">
+        <button class="auth" mat-button  routerLink="login" *ngIf="!loggedIn" (click)="login()">
             <mat-icon aria-hidden="false" aria-label="Acessar o sistema" fontIcon="login"></mat-icon>
             Login
         </button>
-        <button class="auth" mat-button *ngIf="loggedIn">
+        <button class="auth" mat-button *ngIf="loggedIn" (click)="logout()">
             <mat-icon aria-hidden="false" aria-label="Sair do sistema" fontIcon="logout"></mat-icon>
             Logout
         </button>

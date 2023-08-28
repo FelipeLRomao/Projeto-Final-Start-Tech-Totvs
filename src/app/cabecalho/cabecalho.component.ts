@@ -14,7 +14,10 @@ export class CabecalhoComponent {
   password =  '';
   loggedIn = false;
 
-  constructor(private authService: AuthService){
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    ){
     authService.loggedIn$.subscribe((loggedIn:boolean) => {
       this.loggedIn = loggedIn;
     })
@@ -26,6 +29,7 @@ export class CabecalhoComponent {
 
   logout(): void {
     this.authService.logout();
+    this.router.navigate(['/home'])
   }
 
 }

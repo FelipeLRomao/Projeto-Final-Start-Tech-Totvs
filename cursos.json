@@ -82,7 +82,7 @@
       "descricao2": "",
       "descricao3": "",
       "preco": "184.99",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": 8,
@@ -168,5 +168,13 @@
       "id": 3
     }
   ],
-  "usuarios": []
+  "usuarios": [
+    {
+      
+    }
+  ],
+
+  "dataBase" : [
+
+  ]
 }
