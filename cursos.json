@@ -133,14 +133,6 @@
       "descricao3": "",
       "preco": "275.00",
       "favorito": false
-    },
-    {
-      "nome": "Curso Advpl",
-      "descricao": "Aprenda a linguagem proprietária da Totvs",
-      "foto": "https://th.bing.com/th/id/OIP.ow4zt_yFMRkEs_Hvq-a3_QHaCu?w=329&h=129&c=7&r=0&o=5&pid=1.7",
-      "preco": "R$ 156,00",
-      "favorito": false,
-      "id": 12
     }
   ],
   "contato": [

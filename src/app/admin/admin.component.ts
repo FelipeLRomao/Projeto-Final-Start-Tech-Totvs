@@ -68,7 +68,7 @@ export class AdminComponent implements OnInit {
   }
 
   deletarCurso(cursosId: string): void {
-    this.http.delete('http://localhost:3000/imoveis/' + cursosId).subscribe(response => {
+    this.http.delete('http://localhost:3000/cursos/' + cursosId).subscribe(response => {
       this._snackBar.open('O curso foi removido!', 'Fechar', {
         horizontalPosition: this.horizontalPosition,
         verticalPosition: this.verticalPosition,

@@ -1,6 +1,6 @@
-<div class="container-modal">
+<div class="container-modal" *ngFor="let curso of cursos; let i = index">
 
-  <h1>HTML do Zero ao Avançado</h1>
+  <h1>{{cursos.name}}</h1>
   <p>Curso completo do zero ao avançado, para você inciante começar sua carreira na programação e decolar rumo ao sucesso,
     e se tornar um profissional web completo.
     Utilizar HTML de forma plena, respeitando as boas práticas e estruturar layouts com a linguagem
