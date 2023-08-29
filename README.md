@@ -3,8 +3,9 @@
 
 
 ![Print do Projeto](https://i.ibb.co/GC3D5Y8/fundo.png)
-Projeto desenvolvido em Angular para finalização do módulo 04 - Start Tech.<br>
-Membros do grupo: Ana Karina, Brigit Daniella, Felipe Romão, Mayla Mayumi e Vitor Vargem.
+Projeto desenvolvido em Angular para finalização do módulo 04 - Start Tech.
+
+Membros da equipe: Ana Karina, Brigit Daniella, Felipe Romão, Mayla Mayumi e Vitor Vargem.
 ## Tecnologias Usadas
 
 - Angular
