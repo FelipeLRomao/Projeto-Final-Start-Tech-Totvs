@@ -1,27 +1,54 @@
-# InstitutoCodecreators
+# CodeCreators
+### Projeto desenvolvido para conclusão de curso - Start <Tech> Turma 02 - TOTVS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.9.
 
-## Development server
+![Print do Projeto](https://i.ibb.co/GC3D5Y8/fundo.png)
+Projeto desenvolvido em Angular para finalização do módulo 04 - Start <Tech>.
+Membros do grupo: Ana Karina, Brigit Daniella, Felipe Romão, Mayla Mayumi e Vitor Vargem.
+## Tecnologias Usadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Angular
+- SCSS
+- TypeScript
+- Material UI
 
-## Code scaffolding
+## Passo a passo para a instalação do Angular
+Angular precisa do [Node.js](https://nodejs.org/) v16+ para funcionar.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone o repositório e entre na pasta do projeto:
+```sh
+git clone https://github.com/FelipeLRomao/Projeto-Final-Start-Tech-Totvs.git
+cd Projeto-Final-Start-Tech-Totvs
+```
 
-## Build
+2. Instale no terminal o Angular de maneira global em sua máquina:
+```sh
+npm install -g @angular/cli
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. Instale as demais dependências:
+```sh
+npm install 
+```
 
-## Running unit tests
+4. Rodando o servidor:
+```sh
+ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Passo a passo para a instalação do JSON para simular uma API - Back End
 
-## Running end-to-end tests
+1. Em um novo terminal(bash) instale o json-server de forma global em sua máquina:
+```sh
+npm install -g json-server
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Rodando o servidor back-end: 
+```sh
+json-server --watch cursos.json
+```
 
-## Further help
+Tudo pronto! 
+Sua página está rodando no endereço http://localhost:4200/
+Seu servidor está rodando no endereço http://localhost:3000/cursos
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
