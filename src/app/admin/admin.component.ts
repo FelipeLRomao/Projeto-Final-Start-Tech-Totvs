@@ -1,14 +1,21 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import {MatDialog, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { HttpClient } from '@angular/common/http';
 
-import { MatDialog, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { MatSnackBarModule, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition, MatSnackBar } from '@angular/material/snack-bar';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+import {
+  MatSnackBar,
+  MatSnackBarHorizontalPosition,
+  MatSnackBarModule,
+  MatSnackBarVerticalPosition,
+} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-admin',
@@ -19,6 +26,7 @@ import { MatSnackBarModule, MatSnackBarHorizontalPosition, MatSnackBarVerticalPo
 })
 
 export class AdminComponent implements OnInit {
+
   cursos: any;
   horizontalPosition: MatSnackBarHorizontalPosition = 'end';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
@@ -26,11 +34,11 @@ export class AdminComponent implements OnInit {
   displayedColumns: string[] = ['foto', 'descricao', 'acoes'];
   dataSource = new MatTableDataSource();
 
-  constructor(
-    private _snackBar: MatSnackBar,
-    private http: HttpClient,
+  constructor (
     public dialog: MatDialog,
-  ) { }
+    private _snackBar: MatSnackBar,
+    private http: HttpClient
+  ) {}
 
   ngOnInit(): void {
     this.listarCurso();
@@ -42,24 +50,25 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  adicionarCurso(): void {
-
-  }
-
-  editarCurso(cursosId: string): void {
-
-  }
-
-  openDeletarCurso(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(ExcludeConfirm, {
-      width: '250px',
+  modalAdicionar(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(AdicionarCurso, {
+      width: '1000px',
       enterAnimationDuration,
       exitAnimationDuration,
     });
   }
 
+  modalEditar(imovelId: string,  enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(EditarCurso, {
+      width: '1000px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+      data: imovelId
+    });
+  }
+
   deletarCurso(cursosId: string): void {
-    this.http.delete('http://localhost:3000/cursos/' + cursosId).subscribe(response => {
+    this.http.delete('http://localhost:3000/imoveis/' + cursosId).subscribe(response => {
       this._snackBar.open('O curso foi removido!', 'Fechar', {
         horizontalPosition: this.horizontalPosition,
         verticalPosition: this.verticalPosition,
@@ -67,23 +76,25 @@ export class AdminComponent implements OnInit {
       });
       this.listarCurso();
     },
-      error => {
-        this._snackBar.open('Ocorreu um erro ao remover o curso ' + error, 'Fechar', {
-          horizontalPosition: this.horizontalPosition,
-          verticalPosition: this.verticalPosition,
-          duration: 5000
-        });
+    error => {
+      this._snackBar.open('Ocorreu um erro ao remover o curso ' + error, 'Fechar', {
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition,
+        duration: 5000
       });
+    });
   }
 
   toggleFavorito(cursosId: string): void {
-    this.http.get<any>('http://localhost:3000/imoveis/' + cursosId).subscribe(data => {
+    this.http.get<any>('http://localhost:3000/cursos/' + cursosId).subscribe(data => {
 
       this.cursos = data;
+
       this.cursos.favorito = !this.cursos.favorito;
       this.http.patch('http://localhost:3000/cursos/' + cursosId, { favorito: this.cursos.favorito })
         .subscribe(
           response => {
+            // console.log('Property favorito status updated successfully:', response);
             if (this.cursos.favorito === true) {
               this._snackBar.open('O curso foi favoritado!', 'Fechar', {
                 horizontalPosition: this.horizontalPosition,
@@ -103,17 +114,19 @@ export class AdminComponent implements OnInit {
             });
           },
           error => {
-            this._snackBar.open('Ocorreu um erro ao favoritar/desfavoritar o curso!', 'Fechar', {
-              horizontalPosition: this.horizontalPosition,
-              verticalPosition: this.verticalPosition,
-              duration: 5000
-            });
-            // Revert the 'favorito' value if the update fails
-            this.cursos.favorito = !this.cursos.favorito;
-          }
+            // console.error('Error updating property favorito status:', error);
+              this._snackBar.open('Instrutor ocorreu um erro ao favoritar/desfavoritar o curso!', 'Fechar', {
+                horizontalPosition: this.horizontalPosition,
+                verticalPosition: this.verticalPosition,
+                duration: 5000
+              });
+              // Revert the 'favorito' value if the update fails
+              this.cursos.favorito = !this.cursos.favorito;
+            }
 
-        );
+      );
     });
+
   }
 
   filtrarCurso(event: Event) {
@@ -123,61 +136,126 @@ export class AdminComponent implements OnInit {
 }
 
 @Component({
-  selector: 'dialog-excluir',
-  styleUrls: ['dialogExcluir.scss'],
-  templateUrl: 'dialogExcluir.html',
+  selector: 'adicionarCurso',
+  templateUrl: './adicionarCurso.html',
+  styleUrls: ['./modal.scss'],
   standalone: true,
-  imports: [MatButtonModule, MatDialogModule],
+  imports: [MatDialogModule, MatFormFieldModule, MatInputModule, CommonModule, FormsModule],
 })
-export class ExcludeConfirm implements OnInit {
-  curso: any = {}
 
-  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
-  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+export class AdicionarCurso {
 
-  dataSource = new MatTableDataSource();
+  name: string | undefined;
+  description: string | undefined;
+  foto: string | undefined;
+  foto2: string | undefined;
+  descricao1: string | undefined;
+  descricao2: string | undefined;
+  descricao3: string | undefined;
+  preco: string | undefined;
+  favorito: boolean = false;
+
+  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   constructor(
-    @Inject(MAT_DIALOG_DATA) public data: any,
     private http: HttpClient,
     private _snackBar: MatSnackBar,
-    public dialogRef: MatDialogRef<ExcludeConfirm>
-  ) { }
+    public dialogRef: MatDialogRef<AdicionarCurso>
+  ) {}
 
-  ngOnInit(): void {
-    this.http.get<any>('http://localhost:3000/cursos' + this.data)
+  adicionarCurso() {
+    const novoCurso = {
+      nome: this.name,
+      descricao: this.description,
+      descricao1: this.descricao1,
+      descricao2: this.descricao2,
+      descricao3: this.descricao3,
+      foto: this.foto,
+      foto2: this.foto2,
+      preco: this.preco,
+      favorito: false,
+    };
+
+    this.http.post(' http://localhost:3000/cursos', novoCurso)
       .subscribe(
-        response => { this.curso = response }
-      )
-  }
-
-  listarCurso(): void {
-    this.http.get<any>('http://localhost:3000/cursos').subscribe(data => {
-      this.dataSource.data = data;
-    });
-  }
-
-  deletarCurso(cursosId: string): void {
-    this.http.get('http://localhost:3000/cursos/' + cursosId)
-      .subscribe(response => {
-        this.http.delete('http://localhost:3000/cursos/' + cursosId)
-        this._snackBar.open('O curso foi removido!', 'Fechar', {
-          horizontalPosition: this.horizontalPosition,
-          verticalPosition: this.verticalPosition,
-          duration: 5000
-        });
-        this.http.get<any>('http://localhost:3000/cursos/').subscribe(data => {
-          this.dataSource.data = data
-        });
-        this.listarCurso();
-        },
-        error => {
-          this._snackBar.open('Ocorreu um erro ao remover o curso ' + error, 'Fechar', {
+        (response) => {
+          this._snackBar.open('Curso cadastrado com sucesso!', 'Fechar', {
             horizontalPosition: this.horizontalPosition,
             verticalPosition: this.verticalPosition,
             duration: 5000
           });
-        });
+        },
+        (error) => {
+          console.error('Erro ao cadastrar curso:', error);
+          this._snackBar.open('Erro ao cadastrar curso!', 'Fechar', {
+            horizontalPosition: this.horizontalPosition,
+            verticalPosition: this.verticalPosition,
+            duration: 5000
+          });
+        }
+    );
   }
 }
 
+@Component({
+  selector: 'editarCurso',
+  templateUrl: './editarCurso.html',
+  styleUrls: ['./modal.scss'],
+  standalone: true,
+  imports: [MatDialogModule, MatFormFieldModule, MatInputModule, CommonModule, FormsModule],
+})
+
+export class EditarCurso implements OnInit {
+
+  cursos: any = {};
+
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
+  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+
+  constructor(
+    private http: HttpClient,
+    private _snackBar: MatSnackBar,
+    public dialogRef: MatDialogRef<AdicionarCurso>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+  ) {}
+
+    ngOnInit(): void {
+      this.http.get<any>('http://localhost:3000/cursos/' + this.data).subscribe(response => {
+        this.cursos = response;
+      });
+    }
+
+    editarCurso() {
+      const dadosCurso = {
+        nome: this.cursos.name,
+        descricao: this.cursos.description,
+        descricao1: this.cursos.descricao1,
+        descricao2: this.cursos.descricao2,
+        descricao3: this.cursos.descricao3,
+        foto: this.cursos.foto,
+        foto2: this.cursos.foto2,
+        preco: this.cursos.preco,
+        favorito: this.cursos.false,
+      }
+
+      this.http.patch('http://localhost:3000/cursos/' + this.data, dadosCurso )
+      .subscribe(
+        (response) => {
+          this._snackBar.open('Curso alterado com sucesso!', 'Fechar', {
+            horizontalPosition: this.horizontalPosition,
+            verticalPosition: this.verticalPosition,
+            duration: 5000
+          });
+        },
+        (error) => {
+          console.error('Erro ao alterar curso:', error);
+          this._snackBar.open('Erro ao cadastrar curso!', 'Fechar', {
+            horizontalPosition: this.horizontalPosition,
+            verticalPosition: this.verticalPosition,
+            duration: 5000
+          });
+        }
+      );
+    }
+}

@@ -1,0 +1,34 @@
+<div class="modal-container">
+  <h1>Adicionando um novo curso</h1>
+  <mat-form-field>
+      <mat-label>Título:</mat-label>
+      <input matInput placeholder="Ex.: Curso de HTML" [(ngModel)]="name" required />
+  </mat-form-field>
+  <mat-form-field>
+      <mat-label>Imagem:</mat-label>
+      <input matInput placeholder="Cole aqui a URL da imagem" [(ngModel)]="foto" />
+  </mat-form-field>
+  <mat-form-field>
+      <mat-label>Descrição do curso</mat-label>
+      <textarea matInput [(ngModel)]="description"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Informações adicionais</mat-label>
+    <textarea matInput [(ngModel)]="descricao1"></textarea>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Mais sobre o Curso</mat-label>
+  <textarea matInput [(ngModel)]="descricao2"></textarea>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Mais sobre o curso</mat-label>
+  <textarea matInput [(ngModel)]="descricao3"></textarea>
+</mat-form-field>
+  <mat-form-field>
+    <mat-label>Preço (somente numeros em R$):</mat-label>
+    <input matInput placeholder="Ex.: 15000" [(ngModel)]="preco" />
+  </mat-form-field>
+  <button mat-button (click)="adicionarCurso()">
+      Enviar
+  </button>
+</div>

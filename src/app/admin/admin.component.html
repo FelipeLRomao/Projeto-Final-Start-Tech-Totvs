@@ -1,27 +1,34 @@
 <div class="container">
-  <mat-form-field>
-      <mat-label>Pesquisar</mat-label>
-      <input matInput (keyup)="filtrarCurso($event)" placeholder="Ex. Curso de Python" #input>
-  </mat-form-field>
+  <div class="header">
+      <mat-form-field>
+          <mat-label>Pesquisar</mat-label>
+          <input matInput (keyup)="filtrarCurso($event)" placeholder="Ex. Casa de campo" #input>
+      </mat-form-field>
+      <button mat-button (click)="modalAdicionar('500ms', '500ms')">Cadastrar novo imóvel</button>
+  </div>
+
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
       <ng-container matColumnDef="foto">
-      <th mat-header-cell *matHeaderCellDef>Imagem de Capa Curso</th>
-      <td mat-cell *matCellDef="let curso">
-          <img width="200" src="{{ curso.foto}}" alt="Foto de {{ curso.name }}" />
+      <th mat-header-cell *matHeaderCellDef>Foto do imóvel</th>
+      <td mat-cell *matCellDef="let cursos">
+          <img width="200" src="{{ cursos.foto}}" alt="Foto de {{ cursos.name }}" />
       </td>
       </ng-container>
 
       <ng-container matColumnDef="descricao">
       <th mat-header-cell *matHeaderCellDef> Descrição </th>
-      <td mat-cell *matCellDef="let curso">
-          <h2>{{ curso.name }}</h2>
-          {{ curso.description }} <br> {{ curso.descricao2 }}
+      <td mat-cell *matCellDef="let cursos">
+          <h2>{{ cursos.name }}</h2>
+          <p>{{ cursos.description }}</p>
           <ul>
-             <li>Capa: {{ curso.foto }}</li>
-             <li>descricao: {{ curso.description }}</li>
-             <li>Preço: {{ curso.preco }}</li>
+             <li><strong>Foto de Capa:</strong> {{ cursos.foto }}</li>
+             <li><strong>Link Segunda Imagem:</strong> {{ cursos.foto2 }}</li>
+             <li><strong>Descrição:</strong> {{ cursos.descricao1 }}</li>
+             <li><strong>Informações adicionais:</strong> {{ cursos.descricao2 }}</li>
+             <li><strong>Mais sobre o curso:</strong> {{ cursos.descricao3 }}</li>
+             <li><strong>Preço:</strong> {{ cursos.preco }}</li>
           </ul>
       </td>
       </ng-container>
@@ -35,10 +42,10 @@
               (click)="toggleFavorito(cursos.id)">
               <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon>
           </button>
-          <button mat-button class="save" (click)="editarCurso(cursos.id)">
+          <button mat-button class="save" (click)="modalEditar(cursos.id, '500ms', '500ms')">
               <mat-icon aria-hidden="false" aria-label="Editar" fontIcon="edit"></mat-icon>
           </button>
-          <button mat-button class="delete" (click)="openDeletarCurso('0ms', '0ms')">
+          <button mat-button class="delete" (click)="deletarCurso(cursos.id)">
               <mat-icon aria-hidden="false" aria-label="Apagar" fontIcon="delete"></mat-icon>
           </button>
       </td>
