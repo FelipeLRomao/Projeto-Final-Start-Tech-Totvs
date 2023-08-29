@@ -11,7 +11,7 @@
         <p class="preco">R$ {{curso.preco}}</p>
       </mat-card-content>
       <mat-card-actions>
-        <button id="fav"
+        <button
         [class]="(curso.favorito === false ? 'favorite' : 'favorite-checked')"
                             [title]="(curso.favorito === false ? 'Adicionar aos Favoritos' : 'Remover dos favoritos')"
                             (click)="toggleFavorito(curso.id)">

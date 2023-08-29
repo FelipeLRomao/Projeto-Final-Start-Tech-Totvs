@@ -85,6 +85,8 @@ mat-grid-tile {
   color: $branco;
    mat-card{
     margin: 5px;
+    width: 290px;
+    height: 420px;
     border-radius: 0px 0px;
     box-shadow: $card-shadow;
     background-color: #000;
@@ -132,6 +134,12 @@ mat-grid-tile {
     box-shadow: $card-shadow-hover;
    }
   }
+
+  img{
+    width: 100%;
+    height: 185px;
+  }
+
   button {
     cursor: pointer;
   } 
