@@ -50,6 +50,8 @@ json-server --watch cursos.json
 ```
 
 Tudo pronto! 
+
 Sua página está rodando no endereço http://localhost:4200/
+
 Seu servidor está rodando no endereço http://localhost:3000/cursos
 
