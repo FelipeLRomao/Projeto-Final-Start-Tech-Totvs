@@ -27,11 +27,11 @@ export class AuthService {
 
   login(username: string, password: string): Observable<boolean> {
    
-    this.httpClient.get<any[]>('http://localhost:3000/usuarios')
+    this.httpClient.get<any>('http://localhost:3000/users')
       .subscribe(
         (response) => {
           this.usuarios = response;
-          const usuarioEncontrado = this.usuarios.find(usuario => username === '123' && password === '123');
+          const usuarioEncontrado = this.usuarios.find(user => user.username === username && user.password === password);
           if (usuarioEncontrado) {
             this.loggedInSubject.next(true);
             this._snackBar.open('Login realizado com sucesso!', 'Fechar', {
@@ -63,5 +63,4 @@ export class AuthService {
   logout(): void {
     this.loggedInSubject.next(false);
   }
-
 }

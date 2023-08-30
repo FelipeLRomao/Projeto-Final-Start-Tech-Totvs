@@ -10,7 +10,7 @@
       "descricao2": "O foco é no aprendizado da linguagem, mas o principal local de aplicação será na web, através de manipulações do DOM e requisições via Fetch API.",
       "descricao3": "Esse não é um curso para quem deseja algo rápido, mas sim para quem deseja dominar a linguagem. O código ensinado utiliza todas as novidades das novas versões de JavaScript, como arrow functions, promises e mais.",
       "preco": "R$ 99,99",
-      "favorito": true,
+      "favorito": false,
       "nome": "Javascript",
       "descricao": "Crie páginas dinâmicas"
     },
@@ -160,7 +160,7 @@
   ],
   "users": [
     {
-      "user": "Vitor",
+      "username": "Vitor",
       "email": "teste@teste.com",
       "password": "QualquerUma",
       "typeUser": "admin"

@@ -32,4 +32,8 @@ export class CabecalhoComponent {
     this.router.navigate(['/home'])
   }
 
+  HeaderButtonLogin(){
+    this.router.navigate(['login'])
+  }
+
 }

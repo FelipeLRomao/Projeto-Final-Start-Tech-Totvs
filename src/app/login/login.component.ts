@@ -48,7 +48,7 @@ export class LoginComponent {
 
   login(): void {
     this.authService.login(this.username, this.password);
-    this.router.navigate(['home'])
+    this.router.navigate(['admin'])
   }
 
   CreateAccount(): void {
