@@ -158,10 +158,10 @@
   ],
   "users": [
     {
-      "name": "Roosevelt de Carvalho Franklin Santos",
+      "name": "Vitor",
       "idade": "mais de 30",
-      "email": "roosevelt@teste.com",
-      "username": "roofranklin",
+      "email": "vitor@teste.com",
+      "username": "vitor",
       "password": "123456",
       "confirmPassword": "123456",
       "id": 1
