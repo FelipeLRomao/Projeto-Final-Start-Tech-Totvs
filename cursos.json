@@ -9,10 +9,8 @@
       "descricao1": "Neste curso você irá aprender tudo que é necessário para dominar o JavaScript. O curso vai do básico ao avançado e ao final dele você terá uma compreensão total da linguagem, dos seus principais métodos e da sua sintaxe.",
       "descricao2": "O foco é no aprendizado da linguagem, mas o principal local de aplicação será na web, através de manipulações do DOM e requisições via Fetch API.",
       "descricao3": "Esse não é um curso para quem deseja algo rápido, mas sim para quem deseja dominar a linguagem. O código ensinado utiliza todas as novidades das novas versões de JavaScript, como arrow functions, promises e mais.",
-      "preco": "R$ 99,99",
-      "favorito": false,
-      "nome": "Javascript",
-      "descricao": "Crie páginas dinâmicas"
+      "preco": "R$ 220.79",
+      "favorito": true
     },
     {
       "id": 2,
@@ -60,7 +58,7 @@
       "descricao2": "",
       "descricao3": "",
       "preco": "150.00",
-      "favorito": true
+      "favorito": false
     },
     {
       "id": 6,
@@ -160,10 +158,13 @@
   ],
   "users": [
     {
-      "username": "Vitor",
-      "email": "teste@teste.com",
-      "password": "QualquerUma",
-      "typeUser": "admin"
+      "name": "Roosevelt de Carvalho Franklin Santos",
+      "idade": "mais de 30",
+      "email": "roosevelt@teste.com",
+      "username": "roofranklin",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 1
     }
   ],
   "dataBase": [

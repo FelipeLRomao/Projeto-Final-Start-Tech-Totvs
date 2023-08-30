@@ -9,10 +9,10 @@
                                 <h2>Login</h2>
                                 <form action="">
                                     <h3>E-mail ou usuário :</h3>
-                                    <input [(ngModel)]="username" type="email" id="inputName" placeholder=" Digite seu e-mail ou usuário..."
+                                    <input [(ngModel)]="username" name="name" type="email" id="inputName" placeholder=" Digite seu e-mail ou usuário..."
                                         required><br>
                                     <h3>Senha :</h3>
-                                    <input [(ngModel)]="password" type="password" placeholder=" Digite sua senha..." required><br><br>
+                                    <input [(ngModel)]="password" name="password" type="password" placeholder=" Digite sua senha..." required><br><br>
                                     <a href="#" id="changePassword">Esqueci minha senha...</a>
                                     <div class="example-button-row">
                                         <button (click)="login()" mat-fab extended color="primary">
@@ -25,21 +25,23 @@
                                 <h2>Cadastro</h2>
                                 <form action="">
                                     <h3>Nome Completo:</h3>
-                                    <input [(ngModel)]="username" type="name" id="inputName" placeholder=" Digite seu nome..." required><br>
+                                    <input [(ngModel)]="name" type="name" name="name" id="inputName" placeholder=" Digite seu nome..." required><br>
+                                    <h3>Nome de usuário:</h3>
+                                    <input [(ngModel)]="username" type="username" name="username" id="inputName" placeholder=" Digite seu nome..." required><br>
                                     <h3>Selecione sua idade</h3>
                                     <select [(ngModel)]="idade" id="idade" name="idade">
-                                        <option value="textoDeFundo">Escolha sua idade...</option>
-                                        <option value="idade">15 a 18 anos</option>
-                                        <option value="idade">18 a 24 anos</option>
-                                        <option value="idade">24 a 30 anos</option>
-                                        <option value="idade">30+</option>
+                                        <option value="não informado">Escolha sua idade...</option>
+                                        <option value="15 a 18">15 a 18 anos</option>
+                                        <option value="18 a 24">18 a 24 anos</option>
+                                        <option value="24 a 30">24 a 30 anos</option>
+                                        <option value="mais de 30">30+</option>
                                     </select>
                                     <h3>E-mail:</h3>
-                                    <input [(ngModel)]="email" type="email" id="inputName" placeholder=" Digite seu e-mail..." required><br>
+                                    <input [(ngModel)]="email" type="email" name="email" id="inputEmail" placeholder=" Digite seu e-mail..." required><br>
                                     <h3>Senha:</h3>
-                                    <input [(ngModel)]="password" type="password" placeholder=" Digite sua senha..." required><br><br>
+                                    <input [(ngModel)]="password" type="password" name="password" placeholder=" Digite sua senha..." required><br><br>
                                     <h3>Confirme sua senha</h3>
-                                    <input [(ngModel)]="confirmPassword" type="password" placeholder=" Digite sua senha..." required><br><br>
+                                    <input [(ngModel)]="confirmPassword" type="password" name="confirmPassword" placeholder=" Digite sua senha..." required><br><br>
                                     <div class="example-button-row">
                                         <button (click)="CreateAccount()" mat-fab extended color="primary">
                                             <a>✔️ Finalizar</a>

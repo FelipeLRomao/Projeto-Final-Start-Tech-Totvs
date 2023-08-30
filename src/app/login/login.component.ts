@@ -26,7 +26,7 @@ import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition
 })
 export class LoginComponent {
 
-  nome = '';
+  name = '';
   email = '';
   idade = '';
   username = '';
@@ -47,15 +47,14 @@ export class LoginComponent {
   }
 
   login(): void {
-    this.authService.login(this.username, this.password);
-    this.router.navigate(['admin'])
+    this.authService.login(this.username, this.password).subscribe();
   }
 
   CreateAccount(): void {
     const newUser = {
-      name: this.nome,
+      name: this.name,
       idade: this.idade,
-      email:this.email,
+      email: this.email,
       username: this.username,
       password: this.password,
       confirmPassword: this.confirmPassword
