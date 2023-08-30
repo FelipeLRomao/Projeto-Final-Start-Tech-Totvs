@@ -165,6 +165,15 @@
       "password": "123456",
       "confirmPassword": "123456",
       "id": 1
+    },
+    {
+      "name": "Vitor Vargem Julio Barbosa",
+      "idade": "18 a 24",
+      "email": "vitorvargem27@gmail.com",
+      "username": "vitor_vvjb",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "id": 2
     }
   ],
   "dataBase": [
