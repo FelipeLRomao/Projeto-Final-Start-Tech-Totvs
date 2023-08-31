@@ -22,7 +22,7 @@
       "descricao2": "",
       "descricao3": "",
       "preco": "275.20",
-      "favorito": true
+      "favorito": false
     },
     {
       "id": 3,
@@ -82,7 +82,7 @@
       "descricao2": "",
       "descricao3": "",
       "preco": "165.55",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": 8,
@@ -131,6 +131,17 @@
       "descricao3": "",
       "preco": "275.00",
       "favorito": false
+    },
+    {
+      "nome": "teste",
+      "descricao": "teste",
+      "descricao1": "teste",
+      "descricao2": "teste",
+      "descricao3": "teste",
+      "foto": "teste",
+      "preco": "teste",
+      "favorito": false,
+      "id": 12
     }
   ],
   "contato": [
@@ -161,10 +172,11 @@
       "name": "Vitor",
       "idade": "mais de 30",
       "email": "vitor@teste.com",
-      "username": "vitor",
+      "username": "vitorVargem",
       "password": "123456",
       "confirmPassword": "123456",
-      "id": 1
+      "id": 1,
+      "tipo": "admin"
     },
     {
       "name": "Vitor Vargem Julio Barbosa",
@@ -173,16 +185,8 @@
       "username": "vitor_vvjb",
       "password": "123456",
       "confirmPassword": "123456",
+      "tipo": "usuario",
       "id": 2
-    }
-  ],
-  "dataBase": [
-    {
-      "exampleCourseName": "StartTech",
-      "exampleCourseImage": "img.jpg",
-      "exampleCourseDescription": "csbcuybrscirsbcusdlbck",
-      "exampleQuantity": "Courses Quantity",
-      "CoursePrice": "39,90"
     }
   ]
 }

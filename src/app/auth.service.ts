@@ -31,17 +31,27 @@ export class AuthService {
       .subscribe(
         (response) => {
           this.usuarios = response;
-          const usuarioEncontrado = this.usuarios.find(user => user.username === username && user.password === password);
-          if (usuarioEncontrado) {
+          const usuarioPadrao = this.usuarios.find(user => user.username === username && user.password === password && user.tipo === '');
+          const usuarioAdmin = this.usuarios.find(user => user.username === username && user.password === password && user.tipo === "admin")
+          if (usuarioPadrao) {
             this.loggedInSubject.next(true);
             this._snackBar.open('Login realizado com sucesso!', 'Fechar', {
               horizontalPosition: this.horizontalPosition,
               verticalPosition: this.verticalPosition,
               duration: 5000
             }); 
+            this.router.navigate(['home']);
+          }
+          else if(usuarioAdmin){
+            this.loggedInSubject.next(true);
+            this._snackBar.open('Login admin realizado com sucesso!', 'Fechar', {
+              horizontalPosition: this.horizontalPosition,
+              verticalPosition: this.verticalPosition,
+              duration: 5000
+            }); 
             this.router.navigate(['admin']);
           }
-          else {
+          else{
             this._snackBar.open('Usuário ou senha incorretos!', 'Fechar', {
               horizontalPosition: this.horizontalPosition,
               verticalPosition: this.verticalPosition,

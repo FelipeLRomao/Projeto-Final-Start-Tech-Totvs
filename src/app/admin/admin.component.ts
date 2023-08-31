@@ -1,14 +1,15 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
-import {MatDialog, MatDialogRef, MatDialogModule} from '@angular/material/dialog';
-import {MatIconModule} from '@angular/material/icon';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
 import { HttpClient } from '@angular/common/http';
 
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatDialog, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 
 import {
   MatSnackBar,
@@ -34,11 +35,11 @@ export class AdminComponent implements OnInit {
   displayedColumns: string[] = ['foto', 'descricao', 'acoes'];
   dataSource = new MatTableDataSource();
 
-  constructor (
+  constructor(
     public dialog: MatDialog,
     private _snackBar: MatSnackBar,
     private http: HttpClient
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.listarCurso();
@@ -50,6 +51,14 @@ export class AdminComponent implements OnInit {
     });
   }
 
+  modalExcluirCurso(enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.dialog.open(excluirCursos, {
+      width: '250px',
+      enterAnimationDuration,
+      exitAnimationDuration,
+    });
+  }
+
   modalAdicionar(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(AdicionarCurso, {
       width: '1000px',
@@ -58,12 +67,12 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  modalEditar(imovelId: string,  enterAnimationDuration: string, exitAnimationDuration: string): void {
+  modalEditar(cursoId: string, enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(EditarCurso, {
       width: '1000px',
       enterAnimationDuration,
       exitAnimationDuration,
-      data: imovelId
+      data: cursoId
     });
   }
 
@@ -76,13 +85,13 @@ export class AdminComponent implements OnInit {
       });
       this.listarCurso();
     },
-    error => {
-      this._snackBar.open('Ocorreu um erro ao remover o curso ' + error, 'Fechar', {
-        horizontalPosition: this.horizontalPosition,
-        verticalPosition: this.verticalPosition,
-        duration: 5000
+      error => {
+        this._snackBar.open('Ocorreu um erro ao remover o curso ' + error, 'Fechar', {
+          horizontalPosition: this.horizontalPosition,
+          verticalPosition: this.verticalPosition,
+          duration: 5000
+        });
       });
-    });
   }
 
   toggleFavorito(cursosId: string): void {
@@ -115,16 +124,16 @@ export class AdminComponent implements OnInit {
           },
           error => {
             // console.error('Error updating property favorito status:', error);
-              this._snackBar.open('Instrutor ocorreu um erro ao favoritar/desfavoritar o curso!', 'Fechar', {
-                horizontalPosition: this.horizontalPosition,
-                verticalPosition: this.verticalPosition,
-                duration: 5000
-              });
-              // Revert the 'favorito' value if the update fails
-              this.cursos.favorito = !this.cursos.favorito;
-            }
+            this._snackBar.open('Instrutor ocorreu um erro ao favoritar/desfavoritar o curso!', 'Fechar', {
+              horizontalPosition: this.horizontalPosition,
+              verticalPosition: this.verticalPosition,
+              duration: 5000
+            });
+            // Revert the 'favorito' value if the update fails
+            this.cursos.favorito = !this.cursos.favorito;
+          }
 
-      );
+        );
     });
 
   }
@@ -162,7 +171,7 @@ export class AdicionarCurso {
     private http: HttpClient,
     private _snackBar: MatSnackBar,
     public dialogRef: MatDialogRef<AdicionarCurso>
-  ) {}
+  ) { }
 
   adicionarCurso() {
     const novoCurso = {
@@ -194,7 +203,7 @@ export class AdicionarCurso {
             duration: 5000
           });
         }
-    );
+      );
   }
 }
 
@@ -218,28 +227,28 @@ export class EditarCurso implements OnInit {
     private _snackBar: MatSnackBar,
     public dialogRef: MatDialogRef<AdicionarCurso>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-  ) {}
+  ) { }
 
-    ngOnInit(): void {
-      this.http.get<any>('http://localhost:3000/cursos/' + this.data).subscribe(response => {
-        this.cursos = response;
-      });
+  ngOnInit(): void {
+    this.http.get<any>('http://localhost:3000/cursos/' + this.data).subscribe(response => {
+      this.cursos = response;
+    });
+  }
+
+  editarCurso() {
+    const dadosCurso = {
+      nome: this.cursos.name,
+      descricao: this.cursos.description,
+      descricao1: this.cursos.descricao1,
+      descricao2: this.cursos.descricao2,
+      descricao3: this.cursos.descricao3,
+      foto: this.cursos.foto,
+      foto2: this.cursos.foto2,
+      preco: this.cursos.preco,
+      favorito: this.cursos.false,
     }
 
-    editarCurso() {
-      const dadosCurso = {
-        nome: this.cursos.name,
-        descricao: this.cursos.description,
-        descricao1: this.cursos.descricao1,
-        descricao2: this.cursos.descricao2,
-        descricao3: this.cursos.descricao3,
-        foto: this.cursos.foto,
-        foto2: this.cursos.foto2,
-        preco: this.cursos.preco,
-        favorito: this.cursos.false,
-      }
-
-      this.http.patch('http://localhost:3000/cursos/' + this.data, dadosCurso )
+    this.http.patch('http://localhost:3000/cursos/' + this.data, dadosCurso)
       .subscribe(
         (response) => {
           this._snackBar.open('Curso alterado com sucesso!', 'Fechar', {
@@ -257,5 +266,59 @@ export class EditarCurso implements OnInit {
           });
         }
       );
-    }
+  }
+}
+
+@Component({
+  selector: 'dialogExcluirCurso',
+  styleUrls: ['dialogExcluir.scss'],
+  templateUrl: 'dialogExcluir.html',
+  standalone: true,
+  imports: [MatButtonModule, MatDialogModule],
+})
+
+export class excluirCursos implements OnInit {
+  constructor(
+    private http: HttpClient,
+    private _snackBar: MatSnackBar,
+    public dialogRef: MatDialogRef<AdicionarCurso>,
+    @Inject(MAT_DIALOG_DATA) public data: any,) { }
+
+  cursos: any = {}
+
+  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
+
+  dataSource = new MatTableDataSource();
+
+  ngOnInit(): void {
+    this.http.get<any>('http://localhost:3000/cursos/' + this.data).subscribe(response => {
+      this.cursos = response;
+    });
+  }
+
+  listarCurso(): void {
+    this.http.get<any>('http://localhost:3000/cursos').subscribe(data => {
+      this.dataSource.data = data;
+    });
+  }
+
+  deletarCurso(cursosId: string): void {
+    this.http.delete('http://localhost:3000/cursos/' + cursosId).subscribe(response => {
+      this._snackBar.open('O curso foi removido!', 'Fechar', {
+        horizontalPosition: this.horizontalPosition,
+        verticalPosition: this.verticalPosition,
+        duration: 5000
+      });
+      this.listarCurso();
+    },
+      error => {
+        this._snackBar.open('Ocorreu um erro ao remover o curso ' + error, 'Fechar', {
+          horizontalPosition: this.horizontalPosition,
+          verticalPosition: this.verticalPosition,
+          duration: 5000
+        });
+      });
+  }
+
 }

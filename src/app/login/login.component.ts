@@ -32,6 +32,7 @@ export class LoginComponent {
   username = '';
   password = '';
   confirmPassword = '';
+  tipo = 'usuario';
   loggedIn = false;
   horizontalPosition: MatSnackBarHorizontalPosition = 'end';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
@@ -57,7 +58,8 @@ export class LoginComponent {
       email: this.email,
       username: this.username,
       password: this.password,
-      confirmPassword: this.confirmPassword
+      confirmPassword: this.confirmPassword,
+      tipo: 'usuario'
     }
     if (this.password != this.confirmPassword) {
       this._snackBar.open('As senhas não são iguais! Confira novamente...', 'Fechar', {
