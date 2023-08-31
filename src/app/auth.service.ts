@@ -31,7 +31,7 @@ export class AuthService {
       .subscribe(
         (response) => {
           this.usuarios = response;
-          const usuarioPadrao = this.usuarios.find(user => user.username === username && user.password === password && user.tipo === '');
+          const usuarioPadrao = this.usuarios.find(user => user.username === username && user.password === password && user.tipo === 'usuario');
           const usuarioAdmin = this.usuarios.find(user => user.username === username && user.password === password && user.tipo === "admin")
           if (usuarioPadrao) {
             this.loggedInSubject.next(true);

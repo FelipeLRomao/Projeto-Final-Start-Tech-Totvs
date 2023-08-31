@@ -86,8 +86,8 @@ mat-grid-tile {
    mat-card{
     margin: 5px;
     width: 290px;
-    height: 420px;
-    border-radius: 0px 0px;
+    height: 500px;
+    border-radius: 5px;
     box-shadow: $card-shadow;
     background-color: #000;
       .img-card-home{
@@ -130,7 +130,7 @@ mat-grid-tile {
         }
       }
    &:hover{
-    transition: $card-transition;
+    transition: box-shadow 0.8s;
     box-shadow: $card-shadow-hover;
    }
   }
