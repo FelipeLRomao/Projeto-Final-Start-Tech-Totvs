@@ -32,8 +32,12 @@ export class AuthService {
         (response) => {
           this.usuarios = response;
           const usuarioPadrao = this.usuarios.find(user => user.username === username && user.password === password && user.tipo === 'usuario');
+          const usuarioPadraoComEmail = this.usuarios.find(user => user.email === username && user.password === password && user.tipo === 'usuario')
+          
           const usuarioAdmin = this.usuarios.find(user => user.username === username && user.password === password && user.tipo === "admin")
-          if (usuarioPadrao) {
+          const usuarioAdminComEmail = this.usuarios.find(user => user.email === username && user.password === password && user.tipo === "admin")
+
+          if (usuarioPadrao || usuarioPadraoComEmail) {
             this.loggedInSubject.next(true);
             this._snackBar.open('Login realizado com sucesso!', 'Fechar', {
               horizontalPosition: this.horizontalPosition,
@@ -42,7 +46,7 @@ export class AuthService {
             }); 
             this.router.navigate(['home']);
           }
-          else if(usuarioAdmin){
+          else if(usuarioAdmin || usuarioAdminComEmail){
             this.loggedInSubject.next(true);
             this._snackBar.open('Login admin realizado com sucesso!', 'Fechar', {
               horizontalPosition: this.horizontalPosition,

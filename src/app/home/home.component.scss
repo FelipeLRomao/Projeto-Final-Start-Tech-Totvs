@@ -128,6 +128,20 @@ mat-grid-tile {
           }
           
         }
+
+        .favorite-checked {
+          border-radius: 20%;
+          background-color: $branco;
+          margin-right: 10px;
+
+          &:hover {
+            color: red;
+          }
+
+          mat-icon {
+            color: red;
+          }
+        }
       }
    &:hover{
     transition: box-shadow 0.8s;

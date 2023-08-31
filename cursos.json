@@ -46,7 +46,7 @@
       "descricao2": "Crie e adapte textos com auxílio de inteligência artificial, Gere imagens a partir de descrições textuais",
       "descricao3": "Utilize ChatGPT para melhorar a qualidade do seu texto.E entenda como aproveitar ao máximo as tecnologias de inteligência artificial.",
       "preco": "280.15",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": 5,
@@ -58,7 +58,7 @@
       "descricao2": "Você pode usar uma grande variedade de padrões de design em JavaScript. No entanto, alguns padrões de design dificultam que os tipos sejam inferidos automaticamente (por exemplo, padrões que usam programação dinâmica).",
       "descricao3": " Para cobrir esses casos, o TypeScript oferece suporte a uma extensão da linguagem JavaScript, que oferece locais para você dizer ao TypeScript quais devem ser os tipos.",
       "preco": "195.49",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": 6,
@@ -94,7 +94,7 @@
       "descricao2": "É um Sistema Gerenciador de Bancos de Dados (SGBD) relacional que permite armazenar, consultar e manipular dados de inúmeras formas. Dentre seus diversos diferenciais está a linguagem PL/pgSQL",
       "descricao3": "E o PL/pgSQL é uma linguagem que possibilita a construção de programas poderosos para empresas que precisam gerenciar tabelas com milhões ou bilhões de registros e, por isso, aprender essa tecnologia facilita o trabalho de quem manipula o SGBD PostgreSQL.",
       "preco": "165.55",
-      "favorito": true
+      "favorito": false
     },
     {
       "id": 9,
@@ -130,7 +130,7 @@
       "descricao2": "O Curso é para qualquer pessoa, desenvolvedores que querem crescer como programadores na área de desenvolvimento web.",
       "descricao3": "Então mesmo que você ainda não saiba nada sobre programação e quer começar na area esse curso aqui também é pra você. Vamos aprender na pratica tudo desde o zero á configurar seu ambiente de trabalho e todo ecossistema, entender oque é o react e por que usamos ele, criar seus primeiros projetos e até aplicações completas.E Temos como objetivo sempre passar boas praticas e métodos que são os mais usados e preparando você seja para o mercado de trabalho, ou apenas para criar seus próprios projetos.",
       "preco": "185.30",
-      "favorito": true
+      "favorito": false
     },
     {
       "id": 12,
@@ -174,8 +174,8 @@
       "idade": "mais de 30",
       "email": "vitor@teste.com",
       "username": "vitorVargem",
-      "password": "123456",
-      "confirmPassword": "123456",
+      "password": "admin",
+      "confirmPassword": "admin",
       "id": 1,
       "tipo": "admin"
     },
