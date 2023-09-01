@@ -15,18 +15,6 @@
     {
       "id": 2,
       "name": "Angular",
-      "description": "Crie páginas dinâmicas",
-      "foto": "https://i.ibb.co/bgXWQXF/angular.png",
-      "foto2": "",
-      "descricao1": "",
-      "descricao2": "",
-      "descricao3": "",
-      "preco": "275.20",
-      "favorito": true
-    },
-    {
-      "id": 3,
-      "name": "Angular",
       "description": "Construa aplicativos web incríveis",
       "foto": "https://i.ibb.co/bgXWQXF/angular.png",
       "foto2": "",
@@ -37,7 +25,7 @@
       "favorito": false
     },
     {
-      "id": 4,
+      "id": 3,
       "name": "I.A./chatGpt",
       "description": "Otimize a construção de um produto digital",
       "foto": "https://i.ibb.co/gS91df9/IA.webp",
@@ -49,7 +37,7 @@
       "favorito": true
     },
     {
-      "id": 5,
+      "id": 4,
       "name": "TypeScript",
       "description": "TypeScript é projetado para o desenvolvimento de grandes aplicações e transcompilações para JavaScript.",
       "foto": "https://i.ibb.co/wQXsZn5/typescript.png",
@@ -61,7 +49,7 @@
       "favorito": true
     },
     {
-      "id": 6,
+      "id": 5,
       "name": "HTML e CSS",
       "description": "Crie páginas dinâmicas",
       "foto": "https://i.ibb.co/8BV6Y08/HTML-CSS.png",
@@ -73,7 +61,7 @@
       "favorito": false
     },
     {
-      "id": 7,
+      "id": 6,
       "name": "QA",
       "description": "Processos e automação de testes",
       "foto": "https://i.ibb.co/7VbPQLY/QA1.png",
@@ -85,7 +73,7 @@
       "favorito": false
     },
     {
-      "id": 8,
+      "id": 7,
       "name": "Banco SQL",
       "description": "Manipule e pesquise dados com um dos bancos de dados mais avançado de código aberto.",
       "foto": "https://i.ibb.co/YdPhMgJ/sql.jpg",
@@ -97,7 +85,7 @@
       "favorito": false
     },
     {
-      "id": 9,
+      "id": 8,
       "name": "NodeJs",
       "description": "Um ambiente de código-aberto para execução de JavaScript em várias plataformas.",
       "foto": "https://i.ibb.co/m8bqp9N/node1.png",
@@ -109,7 +97,7 @@
       "favorito": false
     },
     {
-      "id": 10,
+      "id": 9,
       "name": "Java",
       "description": "Java é uma linguagem de programação orientada a objetos amplamente utilizada.",
       "foto": "https://i.ibb.co/wYCw4Vz/java-logo.png",
@@ -121,7 +109,7 @@
       "favorito": false
     },
     {
-      "id": 11,
+      "id": 10,
       "name": "React",
       "description": "lidando com arquivos estáticos",
       "foto": "https://i.ibb.co/7pMyPLT/React-icon-svg.png",
@@ -133,7 +121,7 @@
       "favorito": false
     },
     {
-      "id": 12,
+      "id": 11,
       "name": "Linux I",
       "description": "conhecendo e utilizando o terminal",
       "foto": "https://i.ibb.co/gFqfNZ8/linux.webp",
