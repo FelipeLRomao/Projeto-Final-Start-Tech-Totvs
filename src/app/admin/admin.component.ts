@@ -1,6 +1,8 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatDialog, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
@@ -51,11 +53,12 @@ export class AdminComponent implements OnInit {
     });
   }
 
-  modalExcluirCurso(enterAnimationDuration: string, exitAnimationDuration: string): void {
+  modalExcluirCurso(cursoId:string, enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(excluirCursos, {
       width: '250px',
       enterAnimationDuration,
       exitAnimationDuration,
+      data: cursoId
     });
   }
 
@@ -78,7 +81,7 @@ export class AdminComponent implements OnInit {
 
   deletarCurso(cursosId: string): void {
     this.http.delete('http://localhost:3000/cursos/' + cursosId).subscribe(response => {
-      this._snackBar.open('Curso Removido!', 'Fechar', {
+      this._snackBar.open('O curso foi removido!', 'Fechar', {
         horizontalPosition: this.horizontalPosition,
         verticalPosition: this.verticalPosition,
         duration: 5000
@@ -297,6 +300,10 @@ export class excluirCursos implements OnInit {
     });
   }
 
+  load() {
+      location.reload()
+    }
+
   listarCurso(): void {
     this.http.get<any>('http://localhost:3000/cursos').subscribe(data => {
       this.dataSource.data = data;
@@ -311,6 +318,8 @@ export class excluirCursos implements OnInit {
         duration: 5000
       });
       this.listarCurso();
+      this.load()
+
     },
       error => {
         this._snackBar.open('Ocorreu um erro ao remover o curso ' + error, 'Fechar', {
