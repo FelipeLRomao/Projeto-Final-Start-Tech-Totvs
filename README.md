@@ -2,7 +2,7 @@
 ### Projeto desenvolvido para conclusão de curso - Start Tech Turma 02 - TOTVS
 
 
-![Print do Projeto](https://i.ibb.co/GC3D5Y8/fundo.png)
+![Print do Projeto](https://i.ibb.co/Wgc7wdb/fundoo.png)
 Projeto desenvolvido em Angular para finalização do módulo 04 - Start Tech.
 
 Membros da equipe: Ana Karina, Brigit Daniella, Felipe Romão, Mayla Mayumi e Vitor Vargem.
@@ -39,12 +39,17 @@ ng serve
 
 ## Passo a passo para a instalação do JSON para simular uma API - Back End
 
-1. Em um novo terminal(bash) instale o json-server de forma global em sua máquina:
+1. Em um novo terminal(bash) entre na pasta do projeto:
+```sh
+cd Projeto-Final-Start-Tech-Totvs
+```
+
+2. Instale o json-server de forma global em sua máquina:
 ```sh
 npm install -g json-server
 ```
 
-2. Rodando o servidor back-end: 
+3. Rodando o servidor back-end: 
 ```sh
 json-server --watch cursos.json
 ```
