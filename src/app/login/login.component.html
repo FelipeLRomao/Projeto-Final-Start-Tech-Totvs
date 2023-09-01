@@ -1,6 +1,6 @@
 <div class="container" *ngIf="!loggedIn">
     <section id="loginPlace">
-        <mat-grid-list cols="1" rowHeight="6:4">
+        <mat-grid-list cols="1" rowHeight="16:7">
             <mat-grid-tile>
                 <mat-card>
                     <mat-card-content>
@@ -8,7 +8,7 @@
                             <mat-tab label="Login" id="loginLabel">
                                 <h2>Login</h2>
                                 <form action="">
-                                    <h3>E-mail ou usuário :</h3>
+                                    <h3>E-mail ou Usuário:</h3>
                                     <input [(ngModel)]="username" name="name" type="email" id="inputName" placeholder=" Digite seu e-mail ou usuário..."
                                         required><br>
                                     <h3>Senha :</h3>
@@ -26,7 +26,7 @@
                                 <form action="">
                                     <h3>Nome Completo:</h3>
                                     <input [(ngModel)]="name" type="name" name="name" id="inputName" placeholder=" Digite seu nome..." required><br>
-                                    <h3>Nome de usuário:</h3>
+                                    <h3>Nome de Usuário:</h3>
                                     <input [(ngModel)]="username" type="username" name="username" id="inputName" placeholder=" Digite seu nome..." required><br>
                                     <h3>Selecione sua idade</h3>
                                     <select [(ngModel)]="idade" id="idade" name="idade">
@@ -39,9 +39,9 @@
                                     <h3>E-mail:</h3>
                                     <input [(ngModel)]="email" type="email" name="email" id="inputEmail" placeholder=" Digite seu e-mail..." required><br>
                                     <h3>Senha:</h3>
-                                    <input [(ngModel)]="password" type="password" name="password" placeholder=" Digite sua senha..." required><br><br>
+                                    <input [(ngModel)]="password" type="password" name="password" placeholder=" Digite sua senha..." required><br>
                                     <h3>Confirme sua senha</h3>
-                                    <input [(ngModel)]="confirmPassword" type="password" name="confirmPassword" placeholder=" Digite sua senha..." required><br><br>
+                                    <input [(ngModel)]="confirmPassword" type="password" name="confirmPassword" placeholder=" Digite sua senha..." required>
                                     <div class="example-button-row">
                                         <button (click)="CreateAccount()" mat-fab extended color="primary">
                                             <a>✔️ Finalizar</a>
@@ -57,7 +57,7 @@
     </section>
 </div>
 
-<mat-tab-group id="abaLoginCelular">
+<!-- <mat-tab-group id="abaLoginCelular">
     <mat-tab label="Login" id="loginLabel">
         <h2>Login</h2>
         <form action="">
@@ -96,4 +96,4 @@
             </div>
         </form>
     </mat-tab>
-</mat-tab-group>
+</mat-tab-group> -->

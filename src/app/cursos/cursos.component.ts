@@ -55,13 +55,13 @@ export class CursosComponent implements OnInit {
           response => {
             // console.log('Property favorito status updated successfully:', response);
             if (this.curso.favorito === true) {
-              this._snackBar.open('O imóvel foi favoritado!', 'Fechar', {
+              this._snackBar.open('Curso favoritado!', 'Fechar', {
                 horizontalPosition: this.horizontalPosition,
                 verticalPosition: this.verticalPosition,
                 duration: 5000
               });
             } else {
-              this._snackBar.open('O imóvel foi removido dos favoritos...', 'Fechar', {
+              this._snackBar.open('Curso removido dos favoritos', 'Fechar', {
                 horizontalPosition: this.horizontalPosition,
                 verticalPosition: this.verticalPosition,
                 duration: 5000
@@ -74,7 +74,7 @@ export class CursosComponent implements OnInit {
           },
           error => {
             // console.error('Error updating property favorito status:', error);
-              this._snackBar.open('Ocorreu um erro ao favoritar/desfavoritar o imóvel!', 'Fechar', {
+              this._snackBar.open('Ocorreu um erro ao favoritar/desfavoritar o curso!', 'Fechar', {
                 horizontalPosition: this.horizontalPosition,
                 verticalPosition: this.verticalPosition,
                 duration: 5000

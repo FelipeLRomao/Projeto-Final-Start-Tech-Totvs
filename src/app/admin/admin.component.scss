@@ -6,7 +6,9 @@
   width: 1140px;
   display: block;
   margin: auto;
-
+  img{
+    border-radius: 7px;
+  }
   .header {
     display: flex;
     gap: 20px;
@@ -18,15 +20,15 @@
       cursor: pointer;
       border: none;
       border-radius: 4px;
-      background-image: linear-gradient(to right, #7BDD88, #479BDB);
+      background-color: green;
       color: $branco;
       font-size: $media;
       font-weight: 600;
       text-shadow: 1px 1px 4px #000;
 
       &:hover {
-        background-image: linear-gradient(to right, #479BDB, #7BDD88, );
-        transition: $card-transition;
+        background-color: rgba(0, 128, 0, 0.658);
+        transition: 500ms linear;
       }
     }
   }
@@ -64,7 +66,7 @@
 
       &:last-child {
         .favorite {
-          background-image: linear-gradient(to right, #479BDB, #7BDD88);
+          background-color: #fcfcfc;
           border: 1px solid $preto;
           border-radius: 20%;
           margin-right: 10px;
@@ -112,7 +114,6 @@
           width: 80%;
           height: 48px;
           cursor: pointer;
-          border: none;
           border-radius: 4px;
           background-color: $cor-secundaria;
           color: $branco;

@@ -43,6 +43,7 @@ export class HomeComponent implements OnInit {
     this.http.get<any>('http://localhost:3000/cursos').subscribe(data => {
       this.cursos = data;
     });
+    this.iniciarTimer();
   }
   //BOTÃO PARA TODOS OS CURSOS
 
@@ -57,7 +58,11 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  // FAVOTIRANDO CURSOS
+  verDetalhe(cursoId: string): void {   
+    this.router.navigate(['/detalhes', cursoId]);
+  }
+
+  // FAVORITANDO CURSOS
   toggleFavorito(cursoId: string): void {
     this.http.get<any>('http://localhost:3000/cursos/' + cursoId).subscribe(data => {
 
@@ -69,13 +74,13 @@ export class HomeComponent implements OnInit {
           response => {
             // console.log('Property favorito status updated successfully:', response);
             if (this.curso.favorito === true) {
-              this._snackBar.open('O imóvel foi favoritado!', 'Fechar', {
+              this._snackBar.open('Curso favoritado!', 'Fechar', {
                 horizontalPosition: this.horizontalPosition,
                 verticalPosition: this.verticalPosition,
                 duration: 5000
               });
             } else {
-              this._snackBar.open('O imóvel foi removido dos favoritos...', 'Fechar', {
+              this._snackBar.open('Curso removido dos favoritos', 'Fechar', {
                 horizontalPosition: this.horizontalPosition,
                 verticalPosition: this.verticalPosition,
                 duration: 5000
@@ -88,7 +93,7 @@ export class HomeComponent implements OnInit {
           },
           error => {
             // console.error('Error updating property favorito status:', error);
-            this._snackBar.open('Ocorreu um erro ao favoritar/desfavoritar o imóvel!', 'Fechar', {
+            this._snackBar.open('Ocorreu um erro ao favoritar/desfavoritar o curso!', 'Fechar', {
               horizontalPosition: this.horizontalPosition,
               verticalPosition: this.verticalPosition,
               duration: 5000
@@ -144,5 +149,11 @@ export class HomeComponent implements OnInit {
     this.indexImagemAtiva = index;
     this.iniciarTimer();
   }
+
+  todosCursos(): void {
+    this.router.navigate(['/cursos'])
+  }
+
+
 }
 

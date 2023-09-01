@@ -29,7 +29,7 @@ import {
 export class AdminComponent implements OnInit {
 
   cursos: any;
-  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   displayedColumns: string[] = ['foto', 'descricao', 'acoes'];
@@ -78,7 +78,7 @@ export class AdminComponent implements OnInit {
 
   deletarCurso(cursosId: string): void {
     this.http.delete('http://localhost:3000/cursos/' + cursosId).subscribe(response => {
-      this._snackBar.open('O curso foi removido!', 'Fechar', {
+      this._snackBar.open('Curso Removido!', 'Fechar', {
         horizontalPosition: this.horizontalPosition,
         verticalPosition: this.verticalPosition,
         duration: 5000
@@ -105,13 +105,13 @@ export class AdminComponent implements OnInit {
           response => {
             // console.log('Property favorito status updated successfully:', response);
             if (this.cursos.favorito === true) {
-              this._snackBar.open('O curso foi favoritado!', 'Fechar', {
+              this._snackBar.open('Curso Favoritado!', 'Fechar', {
                 horizontalPosition: this.horizontalPosition,
                 verticalPosition: this.verticalPosition,
                 duration: 5000
               });
             } else {
-              this._snackBar.open('O curso foi removido dos favoritos...', 'Fechar', {
+              this._snackBar.open('Curso removido dos favoritos', 'Fechar', {
                 horizontalPosition: this.horizontalPosition,
                 verticalPosition: this.verticalPosition,
                 duration: 5000
@@ -164,7 +164,7 @@ export class AdicionarCurso {
   preco: string | undefined;
   favorito: boolean = false;
 
-  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   constructor(
@@ -220,7 +220,7 @@ export class EditarCurso implements OnInit {
   cursos: any = {};
 
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
-  verticalPosition: MatSnackBarVerticalPosition = 'bottom';
+  verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   constructor(
     private http: HttpClient,
@@ -286,7 +286,7 @@ export class excluirCursos implements OnInit {
 
   cursos: any = {}
 
-  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   dataSource = new MatTableDataSource();

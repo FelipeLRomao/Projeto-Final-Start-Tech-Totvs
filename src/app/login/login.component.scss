@@ -4,22 +4,21 @@
     margin: 0;
     padding: 0;
 }
-
 .container {
     #loginPlace {
         mat-grid-tile {
-            height: 800px;
+            // height: 1000px;
 
             mat-grid-tile-content {
                 margin-top: 0;
             }
 
             mat-card {
+                
                 background-color: white;
-                margin-left: 130px;
                 border-radius: 10px;
-                width: 600px;
-                height: 700px;
+                width: 700px;
+                height: 800px;
                 border: 2px solid rgb(0, 162, 255);
 
                 mat-card-header {
@@ -27,11 +26,11 @@
                         margin-left: 125px;
                         font-size: 50px;
                         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                        text-shadow: 1px 2px 2px rgb(0, 162, 255);
                         transform: text-shadow 2s;
-
+                        overflow: hidden;
                         &:hover {
                             cursor: context-menu;
+                            background-image: linear-gradient(to right, #D91ECC,#3B52D9 );
                         }
                     }
 
@@ -47,7 +46,7 @@
 
                     h2 {
                         font-size: 50px;
-                        background-image: linear-gradient(to right, #479BDB, #7BDD88);
+                        background-image: linear-gradient(to right,#3B52D9, #479BDB, #D91ECC);
                         background-clip: text;
                         overflow-y: hidden;
                         -webkit-background-clip: text;
@@ -57,7 +56,7 @@
                         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
                         &:hover {
-                            background-image: linear-gradient(to right, #7BDD88, #479BDB);
+                            background-image: linear-gradient(to right, #D91ECC,#479BDB,#3B52D9 );
                             background-clip: text;
                             transform: text-shadow 2s;
                             overflow-y: hidden;
@@ -68,8 +67,11 @@
                     }
 
                     form {
-                        margin-left: 30px;
+                        margin-left: 80px;
                         padding-bottom: 40px;
+                        .changePassword{
+                            cursor: pointer;
+                        }
 
                         h3 {
                             font-size: 20px;
@@ -86,7 +88,7 @@
                             font-style: italic
                         }
 
-                        select {
+                        select{
                             border-radius: 3.5px;
                             border: 2px solid black;
                             font-size: 15px;
@@ -96,8 +98,9 @@
                         }
 
                         #changePassword {
+                            text-decoration: none;
                             &:hover {
-                                text-decoration: underline;
+                                color: $branco;
                             }
                         }
 
@@ -105,25 +108,25 @@
                             text-decoration: none;
                             color: blue;
 
-                            &:hover {
-                                text-decoration: underline;
-                                cursor: pointer;
+                            &:hover{
+                                color: $branco;
                             }
 
                         }
 
                         button {
+                            
                             margin-left: 180px;
                             margin-top: 50px;
-                            background-image: linear-gradient(to right, #479BDB, #7BDD88);
+                            background-image: linear-gradient(to right, #3B52D9, #479BDB, #D91ECC);
                             width: 150px;
 
                             &:hover {
-                                background-image: linear-gradient(to right, #7BDD88, #479BDB);
+                                background-image: linear-gradient(to right,  #D91ECC,#479BDB,#3B52D9);
                                 transition: background-image 1s;
                             }
 
-                            a {
+                            a{
                                 color: black;
                                 text-decoration: none;
                             }
@@ -146,125 +149,11 @@
     }
 }
 
-#abaLoginCelular {
-    display: none;
-}
+#loggedIn{
 
-#loggedIn {
-
-    h1 {
+    h1{
         color: white;
-
+        
     }
 }
 
-@media (max-width: 480px) {
-
-    .container {
-        display: none;
-    }
-
-    #abaLoginCelular {
-        display: inline;
-        height: 100%;
-
-        .mat-mdc-tab.mdc-tab {
-            background-image: linear-gradient(to right, #479BDB, #7BDD88);
-        }
-
-        .mat-mdc-tab-body-content {
-            background-color: $branco;
-        }
-
-        h2 {
-            font-size: 50px;
-            background-image: linear-gradient(to right, #479BDB, #7BDD88);
-            background-clip: text;
-            overflow-y: hidden;
-            -webkit-background-clip: text;
-            color: transparent;
-            text-align: center;
-            margin-top: 15px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-        }
-
-        form {
-            margin-left: 30px;
-            padding-bottom: 40px;
-
-            h3 {
-                font-size: 16px;
-                margin-top: 10px;
-                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                cursor: default;
-            }
-
-            input {
-                border-radius: 3.5px;
-                font-size: 15px;
-                width: 90%;
-                height: 40px;
-                font-style: italic
-            }
-
-            select {
-                border-radius: 3.5px;
-                border: 2px solid black;
-                font-size: 15px;
-                width: 90%;
-                height: 50px;
-                font-style: italic
-            }
-
-            #changePassword {
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-
-            a {
-                text-decoration: none;
-                color: blue;
-
-                &:hover {
-                    text-decoration: underline;
-                    cursor: pointer;
-                }
-
-            }
-
-            .example-button-row {
-                padding-bottom: 9.5px;
-
-                button {
-                    margin-left: 90px;
-                    margin-top: 50px;
-                    background-image: linear-gradient(to right, #479BDB, #7BDD88);
-                    width: 150px;
-
-                    a {
-                        color: black;
-                        text-decoration: none;
-                    }
-
-                }
-            }
-
-            #btnCadastro {
-                margin-left: 90px;
-                margin-top: 30px;
-                background-image: linear-gradient(to right, #479BDB, #7BDD88);
-                width: 150px;
-
-                a {
-                    color: black;
-                    text-decoration: none;
-                }
-
-            }
-        }
-    }
-
-
-}

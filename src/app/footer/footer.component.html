@@ -1,7 +1,7 @@
 <footer>
     <div class="container">
         <div class="texto-rodape">
-        <p>&copy; {{ title }} | {{copyright}} - {{developer}}.</p>
+        <p>&copy; {{ title }} | {{copyright}} | {{developer}}.</p>
         </div>
         <div class="div-icons" *ngFor="let icon of redesSociais">
             <a href= {{icon.link}} target="_blank"><img class="icons" mat-card-image [src]="icon.icone" [alt]="icon.nome"></a>
@@ -9,7 +9,7 @@
     </div>
     <div class="containerResponsivo">
         <div class="texto-rodape">
-        <p>&copy; {{ title }} |<br> {{copyright}}<br>- {{developer}}.</p>
+        <p>&copy; {{ title }} |<br> {{copyright}}|<br>| {{developer}}.</p>
         </div>
         <div class="div-icons" *ngFor="let icon of redesSociais">
             <a href= {{icon.link}} target="_blank"><img class="icons" mat-card-image [src]="icon.icone" [alt]="icon.nome"></a>

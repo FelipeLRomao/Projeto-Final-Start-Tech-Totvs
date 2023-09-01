@@ -1,7 +1,9 @@
 @import '../app.component.scss';
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Spice&display=swap');
+
 // imagem logo codecreators 
 .codecreators{
-  width: 100%;
+  width: 100%
 }
 .container{
   width: 1140px;
@@ -32,13 +34,17 @@ h2{
 .cursod_title {
   display: block;
   margin: 0 auto 4rem auto;
+  font-size: 60px;
+  text-align: center;
 }
 .cursod_section {
   padding: 2rem 0;
 }
 .cursod_item {
+  cursor: pointer;
+  list-style-type: none;
   background-color: #202020;
-  border-radius: 3px;
+  border-radius: 5px;
   border: 1px solid #479BDB;
   margin-top: 1rem;
   margin-bottom: 4rem;
@@ -58,8 +64,9 @@ h2{
 //cursos mais procurados
 .container-cursos{
   width: 1140px;
-  display:grid;
+  overflow: hidden;
   margin: auto;
+  
 }
 .fundo-cursos{
   background-color: #181717;
@@ -68,31 +75,37 @@ h2{
 //botão para todos os cursos
 .todosCursos{
   text-decoration: none;
-  color: $preto;
+  margin-left: 450px;
+  cursor: pointer;
+  overflow: hidden;
+  font-weight: bold;
+  padding: 15px;
+  color: $branco;
   text-align: center;
-  border: 1px solid $preto;
-  border-radius: 3px;
-  background-image: linear-gradient(to right,  #7BDD88,#479BDB);
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #3B52D9, #479BDB, #D91ECC);
   &:hover{
-    transition: $card-transition;
-    box-shadow: $card-shadow;
-    color: $branco;
+    transition: 500ms linear;
+    color: $preto;
+    background-image: linear-gradient(to right,  #D91ECC,#479BDB, #3B52D9);
   }
 }
 
 //cursos mais procurados + depoimentos(cards)
 mat-grid-tile {
+  cursor: pointer;
   color: $branco;
    mat-card{
     margin: 5px;
-    width: 290px;
-    height: 500px;
+    width: 250px;
+    border-radius: 0px 0px;
+    padding: 3px;
+    border: 1px solid $branco;
     border-radius: 5px;
-    box-shadow: $card-shadow;
     background-color: #000;
       .img-card-home{
         border-radius: 0px 0px 50px 0px;
-        box-shadow: $card-shadow;
+        box-shadow: $cor-primaria;
       }
       h2{
        padding: 20px;
@@ -101,8 +114,11 @@ mat-grid-tile {
       p{
         font-size: $media;
         font-family: $fonte-secundaria;
-        text-align: justify;
+        text-align: center;
         color: $branco;
+      }
+      mat-card-subtitle{
+        color: $cor-primaria;
       }
       mat-card-content{
         background-color: #000;
@@ -116,46 +132,35 @@ mat-grid-tile {
             border-radius: 25px;
             font-size: $media;
             border: none;
-            color: #fff;
-            text-shadow: $card-shadow;
-            background-image: linear-gradient(to right,  #7BDD88,#479BDB);
-            box-shadow: $card-shadow;
+            color: #fff;            
+            background-image: linear-gradient(to right, #3B52D9, #479BDB, #D91ECC);            
             font-weight: 600;
           &:hover{
             transition: $card-transition;
-             background-image: linear-gradient(to right, #479BDB, #7BDD88);
-             color: $cinza-escuro;
+            background-image: linear-gradient(to right,  #D91ECC,#479BDB, #3B52D9);
+            color: $preto;
           }
           
         }
-
-        .favorite-checked {
-          border-radius: 20%;
-          background-color: $branco;
-          margin-right: 10px;
-
-          &:hover {
-            color: red;
-          }
-
-          mat-icon {
-            color: red;
-          }
-        }
       }
    &:hover{
-    transition: box-shadow 0.8s;
+    transition: $card-transition;
     box-shadow: $card-shadow-hover;
    }
   }
 
   img{
     width: 100%;
-    height: 185px;
   }
 
   button {
+    width: 80%;
+    height: 50px;
     cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: $cor-secundaria;
+    color: $branco;
   } 
 }
 
@@ -165,6 +170,7 @@ mat-grid-tile {
   background-repeat: no-repeat;
   height: 850px;
   transition: all 0.5s ease-in-out;
+  border-radius: 7px;
 }
 .botoes-controle {
   display: flex;
@@ -190,7 +196,21 @@ mat-grid-tile {
 .example-card {
   max-width: 400px;
 }
-.example-header-image {
-  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+.example-header-image1 {
+  background-image: url('https://i.ibb.co/fMbTZ9V/may.jpg');
   background-size: cover;
 }
+.example-header-image2{
+  background-image: url('https://i.ibb.co/yhkn6QR/karina.jpg');
+  background-size: cover;
+}
+.example-header-image3{
+  background-image: url('https://i.ibb.co/6887Sc7/brigit.jpg');
+  background-size: cover;
+}
+.example-header-image4{
+  background-image: url('https://i.ibb.co/p4xYT41/ina.jpg');
+  background-size: cover;
+}
+
+
