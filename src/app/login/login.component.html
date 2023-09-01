@@ -39,9 +39,9 @@
                                     <h3>E-mail:</h3>
                                     <input [(ngModel)]="email" type="email" name="email" id="inputEmail" placeholder=" Digite seu e-mail..." required><br>
                                     <h3>Senha:</h3>
-                                    <input [(ngModel)]="password" type="password" name="password" placeholder=" Digite sua senha..." required><br><br>
-                                    <h3>Confirme sua senha</h3>
-                                    <input [(ngModel)]="confirmPassword" type="password" name="confirmPassword" placeholder=" Digite sua senha..." required><br><br>
+                                    <input [(ngModel)]="password" type="password" name="password" placeholder=" Digite sua senha..." required><br>
+                                    <h3>Confirme sua senha:</h3>
+                                    <input [(ngModel)]="confirmPassword" type="password" name="confirmPassword" placeholder=" Confirmação de senha..." required><br><br>
                                     <div class="example-button-row">
                                         <button (click)="CreateAccount()" mat-fab extended color="primary">
                                             <a>✔️ Finalizar</a>

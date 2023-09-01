@@ -2,18 +2,6 @@
   "cursos": [
     {
       "id": 1,
-      "name": "Python",
-      "description": "Começando com a linguagem",
-      "foto": "https://i.ibb.co/nRX9q0B/Python-logo-notext-svg.png",
-      "foto2": "",
-      "descricao1": "Aqui, você aprende a usar Python, desde o zero, criando toda a lógica de programação, e entende como funciona o Python e como usar todas as ferramentas dele para resolver qualquer desafio.",
-      "descricao2": "É uma linguagem de programação de alto nível e de propósito generalista. Sua filosofia de design enfatiza a legibilidade do código com a proposta de ser de fácil compreensão com o uso de palavras-chave em inglês. Não costuma utilizar recursos gráficos como chaves e colchetes para delimitar blocos.",
-      "descricao3": "Dominando tudo que você precisa do Python, você agora pode partir para criar Projetos Completos Reais, do zero até o 'deploy', até a utilização do Projeto na sua empresa. Projetos realmente completos em todas as áreas, seja em Automações de Tarefas e Sistemas, Ciência de Dados, Criação de Sites, Criação de Jogos ou Desenvolvimento de Sites.",
-      "preco": "159.80",
-      "favorito": true
-    },
-    {
-      "id": 2,
       "name": "Javascript",
       "description": "Crie páginas dinâmicas",
       "foto": "https://i.ibb.co/mR1FWst/js.png",
@@ -22,6 +10,18 @@
       "descricao2": "O foco é no aprendizado da linguagem, mas o principal local de aplicação será na web, através de manipulações do DOM e requisições via Fetch API.",
       "descricao3": "Esse não é um curso para quem deseja algo rápido, mas sim para quem deseja dominar a linguagem. O código ensinado utiliza todas as novidades das novas versões de JavaScript, como arrow functions, promises e mais.",
       "preco": "R$ 220.79",
+      "favorito": true
+    },
+    {
+      "id": 2,
+      "name": "Angular",
+      "description": "Crie páginas dinâmicas",
+      "foto": "https://i.ibb.co/bgXWQXF/angular.png",
+      "foto2": "",
+      "descricao1": "",
+      "descricao2": "",
+      "descricao3": "",
+      "preco": "275.20",
       "favorito": true
     },
     {
