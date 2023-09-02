@@ -7,8 +7,6 @@
   margin-bottom: 30px;
   h2{
     font-size: $grande;
-    font-style: italic;
-    text-shadow: 2px 2px 2px #479BDB;
     color: $branco;
     text-align: center;
     margin-top: 50px;
@@ -19,14 +17,14 @@ mat-grid-tile {
   color: $branco;
    mat-card{
     margin: 5px;
-    width: 290px;
-    height: 420px;
-    border-radius: 0px 0px;
-    box-shadow: $card-shadow;
+    width: 250px;
+    border-radius: 5px;
+    padding: 1px;
+    border: 1px solid $branco;
     background-color: #000;
       .img-card-home{
         border-radius: 0px 0px 50px 0px;
-        box-shadow: $card-shadow;
+        
       }
       h2{
        padding: 20px;
@@ -41,7 +39,7 @@ mat-grid-tile {
       p{
         font-size: $media;
         font-family: $fonte-secundaria;
-        text-align: justify;
+        text-align: center;
         color: $branco;
       }
       mat-card-content{
@@ -50,30 +48,28 @@ mat-grid-tile {
       mat-card-actions{
         background-color: #000;
         padding-bottom: 10px;
-            gap:5px;
+        gap:5px;
           button{
             padding: 15px;
             border-radius: 25px;
             font-size: $media;
             border: none;
-            color: #fff;
-            text-shadow: $card-shadow;
-            background-image: linear-gradient(to right,  #7BDD88,#479BDB);
-            box-shadow: $card-shadow;
+            color: #fff;            
+            background-image: linear-gradient(to right,  #3B52D9, #479BDB, #D91ECC);           
             font-weight: 600;
             cursor: pointer;
           &:hover{
             transition: $card-transition;
-             background-image: linear-gradient(to right, #479BDB, #7BDD88);
+             background-image: linear-gradient(to right, #D91ECC, #479BDB ,#3B52D9);
              color: $preto;
           }
           
         }
       }
-   &:hover{
-    transition: $card-transition;
+    &:hover{
+      transition: $card-transition;
       box-shadow: $card-shadow-hover;
-   }
+     }
   }
 
   .favorite{
@@ -89,11 +85,14 @@ mat-grid-tile {
 
   img{
     width: 100%;
-    height: 210px;
   }
+  button {
+    width: 80%;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: $cor-secundaria;
+    color: $branco;
+  } 
 }
-
-
-
-
-//-----------------

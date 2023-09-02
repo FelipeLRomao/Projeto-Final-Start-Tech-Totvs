@@ -17,7 +17,7 @@
     }
     button {
         display: block;
-        background-image: linear-gradient(to right,  #7BDD88,#479BDB);
+        background-image: linear-gradient(to right, #3B52D9, #479BDB, #D91ECC);
         font-size: $media;
         font-weight: 600;
         text-shadow: 1px 1px 4px #000;
@@ -29,8 +29,9 @@
         color: $branco;
         cursor: pointer;
         &:hover {
-          background-image: linear-gradient(to right, #479BDB,  #7BDD88,);
-          transition: $card-transition;
+            background-image: linear-gradient(to right,  #d91ecdc5,#479bdbcb, #3b53d9d5);
+            transition: $card-transition;
+            color: $preto;
         }
         &:disabled {
             cursor: not-allowed;

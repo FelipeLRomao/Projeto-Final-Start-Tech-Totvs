@@ -1,5 +1,5 @@
 <!--INTRODUÇÃO IMAGEM/TEXTO-->
-<img class="codecreators" src="https://i.ibb.co/HGsWvpH/Design-sem-nome-2.png" alt="">
+<img class="codecreators" src="https://i.ibb.co/9GMVytZ/cc-logo.png" alt="">
 <div class="container">
   <section>
     <h2>Os cursos oferecidos na CodeCreators são voltados para o desenvolvimento web e divididos em duas categorias: Front End e Back End. Abaixo estão os principais cursos.</h2>
@@ -10,8 +10,9 @@
 <!--FRONT END-->
   <div class="cursod">
     <div class="cursod_section">
-      <img class="cursod_title" src="https://www.origamid.com/wp-content/themes/origamid_theme/img/svg/frontend.svg" alt="Front End">
-      <ul class="cursod_list">
+      <h1 class="front">FRONT END</h1>
+      <!-- <img class="cursod_title" src="https://www.origamid.com/wp-content/themes/origamid_theme/img/svg/frontend.svg" alt="Front End"> -->
+      <ul class="cursod_list"> 
         <li class="cursod_item active">
           <h3>HTML e CSS para Iniciantes</h3>
           <p>Ensinando do zero | 164 aulas | 23 horas | Certificado de Conclusão | Suporte para Dúvidas</p>   
@@ -36,7 +37,8 @@
     </div>
   <!--BACK END-->
     <div class="cursod_section">
-      <img class="cursod_title" src="https://www.origamid.com/wp-content/themes/origamid_theme/img/svg/uidesign.svg" alt="UI Design">
+      <h1 class="back">BACK END</h1>
+      <!-- <img class="cursod_title" src="https://www.origamid.com/wp-content/themes/origamid_theme/img/svg/uidesign.svg" alt="UI Design"> -->
       <ul class="cursod_list">
         <li class="cursod_item active">
           <h3>Python Completo</h3>
@@ -68,7 +70,8 @@
 <div class="fundo-cursos">
 <div class="container-cursos">
   <h2>CURSOS MAIS PROCURADOS</h2>
-  <a class="todosCursos" href="cursos">CONHEÇA TODOS OS CURSOS</a>
+  <button class="todosCursos" routerLink="cursos" (click)="todosCursos()">CONHEÇA TODOS OS CURSOS</button>
+  
   <section>
     <mat-grid-list cols="4" rowHeight="3:6">
       <div *ngFor="let curso of cursos; let i = index">
@@ -79,14 +82,14 @@
                 <h2>{{curso.name}}</h2>
                 <p class="descricao">{{curso.description}}</p>
                 <p class="preco">R$ {{curso.preco}}</p>
-                <p>Ref: {{curso.id}}</p>
+                
               </mat-card-content>
               <mat-card-actions>
                 <button id="fav"[class]="(curso.favorito === false ? 'favorite' : 'favorite-checked')"
                 [title]="(curso.favorito === false ? 'Adicionar aos Favoritos' : 'Remover dos favoritos')"
                 (click)="toggleFavorito(curso.id)">
                 <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon></button>
-                <button mat-button (click)="abrirModalCurso()">Mais detalhes</button> 
+                <button mat-button (click)="verDetalhe(curso.id)">Detalhes</button>
               </mat-card-actions>
           </mat-card>
         </mat-grid-tile>
@@ -117,48 +120,48 @@
       <mat-grid-tile>
         <mat-card class="example-card">
           <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Mayla</mat-card-title>
-            <mat-card-subtitle>Angular para Iniciantes</mat-card-subtitle>
+            <div mat-card-avatar class="example-header-image1"></div>
+            <mat-card-title>Mayla M.</mat-card-title>
+            <mat-card-subtitle>Angular</mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit est, culpa mollitia repudiandae suscipit adipisci corporis eaque necessitatibus odio a</p>
+            <p>"Aprendi muito e me sinto confiante em aplicar os conceitos em projetos reais. Agradeço pela qualidade do curso e pela contribuição no meu crescimento profissional."</p>
           </mat-card-content>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
         <mat-card class="example-card">
           <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
+            <div mat-card-avatar class="example-header-image2"></div>
             <mat-card-title>Ana Karina</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            <mat-card-subtitle>Python</mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit est, culpa mollitia repudiandae suscipit adipisci corporis eaque necessitatibus odio a</p>
+            <p>"O conteúdo apresentado foi estruturado e de fácil compreensão, tornando o aprendizado eficiente e agradável. Obrigada pelo suporte oferecido durante o curso."</p>
           </mat-card-content>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
         <mat-card class="example-card">
           <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
+            <div mat-card-avatar class="example-header-image3"></div>
             <mat-card-title>Brigit Daniela</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            <mat-card-subtitle>HTML e CSS</mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit est, culpa mollitia repudiandae suscipit adipisci corporis eaque necessitatibus odio a</p>
+            <p>"Agora me sinto preparado para criar minhas próprias páginas web e estilizá-las de forma profissional. Um curso valioso para minha jornada como dev."</p>
           </mat-card-content>
         </mat-card>
       </mat-grid-tile>
       <mat-grid-tile>
         <mat-card class="example-card">
             <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Felipe</mat-card-title>
-              <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+              <div mat-card-avatar class="example-header-image4"></div>
+              <mat-card-title>Inaiara A.</mat-card-title>
+              <mat-card-subtitle>Java</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit est, culpa mollitia repudiandae suscipit adipisci corporis eaque necessitatibus odio a</p>
+              <p>"Os instrutores demonstraram profundo conhecimento na área e se mostrou disponível para auxiliar durante todo o curso. Parabéns pelo curso tão enriquecedor!"</p>
             </mat-card-content>
         </mat-card>
       </mat-grid-tile>

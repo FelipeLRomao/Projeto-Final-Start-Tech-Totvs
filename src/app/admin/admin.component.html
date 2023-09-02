@@ -1,17 +1,18 @@
+
 <div class="container">
   <div class="header">
       <mat-form-field>
           <mat-label>Pesquisar</mat-label>
-          <input matInput (keyup)="filtrarCurso($event)" placeholder="Ex. Casa de campo" #input>
+          <input matInput (keyup)="filtrarCurso($event)" placeholder="Ex: Angular" #input>
       </mat-form-field>
-      <button mat-button (click)="modalAdicionar('500ms', '500ms')">Cadastrar novo imóvel</button>
+      <button mat-button (click)="modalAdicionar('500ms', '500ms')">Cadastrar novo curso</button>
   </div>
 
 
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
       <ng-container matColumnDef="foto">
-      <th mat-header-cell *matHeaderCellDef>Foto do imóvel</th>
+      <th mat-header-cell *matHeaderCellDef>Foto do Curso</th>
       <td mat-cell *matCellDef="let cursos">
           <img width="200" src="{{ cursos.foto}}" alt="Foto de {{ cursos.name }}" />
       </td>

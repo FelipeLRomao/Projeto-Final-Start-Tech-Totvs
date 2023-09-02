@@ -34,7 +34,7 @@ export class LoginComponent {
   confirmPassword = '';
   tipo = 'usuario';
   loggedIn = false;
-  horizontalPosition: MatSnackBarHorizontalPosition = 'end';
+  horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
   constructor(

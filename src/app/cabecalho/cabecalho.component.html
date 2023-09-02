@@ -2,13 +2,13 @@
     <div class="container">
         <h1 routerLink="home">CodeCreators</h1>
         <span class="menu-spacer"></span>
-        <button class="" mat-button routerLink="/">Home</button>
+        <button class="" mat-button routerLink="/">HOME</button>
         <button class="responsiveButton" mat-button routerLink="cursos">Cursos</button>
-        <button class="desktopButton" mat-button routerLink="cursos">Nossos Cursos</button>
-        <button mat-button routerLink="contato">Contato</button>
+        <button class="desktopButton" mat-button routerLink="cursos">CURSOS</button>
+        <button mat-button routerLink="contato">CONTATO</button>
         <button class="auth" mat-button  routerLink="login" *ngIf="!loggedIn" (click)="HeaderButtonLogin()">
             <mat-icon aria-hidden="false" aria-label="Acessar o sistema" fontIcon="login"></mat-icon>
-            Login
+            LOGIN
         </button>
         <button class="auth" mat-button *ngIf="loggedIn" (click)="logout()">
             <mat-icon aria-hidden="false" aria-label="Sair do sistema" fontIcon="logout"></mat-icon>

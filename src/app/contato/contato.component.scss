@@ -8,18 +8,19 @@
   }
   .container{
     max-width: 800px;
-    background: #ffffffe1;
-    width: 800px;
+    background: $branco;
+    width: 700px;
     padding: 40px 60px 40px 60px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     border-radius: 7px;
+    border: 2px solid rgb(0, 162, 255);
   }
   .container .text{
     text-align: center;
     font-size: 35px;
     font-weight: 600;
     padding: 20px;
-    background-image: linear-gradient(to right, #479BDB, #7BDD88);
+    background-image: linear-gradient(to right, #3B52D9, #479BDB, #D91ECC);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -101,9 +102,10 @@
     width: 300%;
     position: absolute;
     left: -100%;
-    background-image: linear-gradient(to right, #479BDB, #7BDD88);
+    background-image: linear-gradient(to right, #3B52D9, #D91ECC);
     transition: all 0.4s;
   }
+ 
   .submit-btn .input-data:hover .inner{
     left: 0;
   }
@@ -120,9 +122,9 @@
     z-index: 2;
   }
 
-  .mat-label{
-    background-color: #ffffffe1;
-  }
+  
+
+ 
   @media (max-width: 700px) {
     .container .text{
       font-size: 30px;
