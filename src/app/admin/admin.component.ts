@@ -1,8 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
-import { Location } from '@angular/common';
 
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatDialog, MatDialogRef, MatDialogModule } from '@angular/material/dialog';
@@ -77,24 +75,6 @@ export class AdminComponent implements OnInit {
       exitAnimationDuration,
       data: cursoId
     });
-  }
-
-  deletarCurso(cursosId: string): void {
-    this.http.delete('http://localhost:3000/cursos/' + cursosId).subscribe(response => {
-      this._snackBar.open('O curso foi removido!', 'Fechar', {
-        horizontalPosition: this.horizontalPosition,
-        verticalPosition: this.verticalPosition,
-        duration: 5000
-      });
-      this.listarCurso();
-    },
-      error => {
-        this._snackBar.open('Ocorreu um erro ao remover o curso ' + error, 'Fechar', {
-          horizontalPosition: this.horizontalPosition,
-          verticalPosition: this.verticalPosition,
-          duration: 5000
-        });
-      });
   }
 
   toggleFavorito(cursosId: string): void {
@@ -329,5 +309,4 @@ export class excluirCursos implements OnInit {
         });
       });
   }
-
 }

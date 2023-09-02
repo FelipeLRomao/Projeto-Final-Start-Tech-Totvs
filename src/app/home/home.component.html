@@ -89,7 +89,7 @@
                 [title]="(curso.favorito === false ? 'Adicionar aos Favoritos' : 'Remover dos favoritos')"
                 (click)="toggleFavorito(curso.id)">
                 <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="favorite"></mat-icon></button>
-                <button mat-button (click)="verDetalhe(curso.id)">Detalhes</button>
+                <button mat-button (click)="abrirModalCurso(curso.id)">Detalhes</button>
               </mat-card-actions>
           </mat-card>
         </mat-grid-tile>
