@@ -73,7 +73,7 @@
   <button class="todosCursos" routerLink="cursos" (click)="todosCursos()">CONHEÇA TODOS OS CURSOS</button>
   
   <section>
-    <mat-grid-list cols="4" rowHeight="3:6">
+    <mat-grid-list [cols]="breakpoint" (window:resize)="onResize($event)" rowHeight="2:3.5.1">
       <div *ngFor="let curso of cursos; let i = index">
         <mat-grid-tile *ngIf = "curso.favorito === true">
           <mat-card>
@@ -116,7 +116,7 @@
 <!--DEPOIMENTOS DOS USUÁRIOS-->
 <div class="container">
   <h2>DEPOIMENTOS</h2>
-    <mat-grid-list cols="4" rowHeight="1:1">
+    <mat-grid-list [cols]="breakpoint" (window:resize)="onResize($event)" rowHeight="2:2.1">
       <mat-grid-tile>
         <mat-card class="example-card">
           <mat-card-header>
@@ -149,7 +149,7 @@
             <mat-card-subtitle>HTML e CSS</mat-card-subtitle>
           </mat-card-header>
           <mat-card-content>
-            <p>"Agora me sinto preparado para criar minhas próprias páginas web e estilizá-las de forma profissional. Um curso valioso para minha jornada como dev."</p>
+            <p>"Agora me sinto preparado para criar minhas próprias páginas web e estilizá-las de forma profissional. Um curso tão valioso para minha jornada como devenvolvedora."</p>
           </mat-card-content>
         </mat-card>
       </mat-grid-tile>

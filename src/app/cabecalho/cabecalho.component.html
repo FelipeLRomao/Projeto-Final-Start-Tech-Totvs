@@ -12,7 +12,7 @@
         </button>
         <button class="auth" mat-button *ngIf="loggedIn" (click)="logout()">
             <mat-icon aria-hidden="false" aria-label="Sair do sistema" fontIcon="logout"></mat-icon>
-            Logout
+            LOGOUT
         </button>
     </div>
 </mat-toolbar>
@@ -20,16 +20,16 @@
 <h1 routerLink="home" style="text-align: center;" id="responsiveTitle">CodeCreators</h1>
 <mat-toolbar>
     <div class="containerResponsivo">
-        <button class="headerRouterButton" mat-button routerLink="/">Home</button>
-        <button class="headerRouterButton" mat-button routerLink="cursos">Cursos</button>
-        <button class="headerRouterButton" mat-button routerLink="contato">Contato</button>
+        <button class="headerRouterButton" mat-button routerLink="/">HOME</button>
+        <button class="headerRouterButton" mat-button routerLink="cursos">CURSOS</button>
+        <button class="headerRouterButton" mat-button routerLink="contato">CONTATO</button>
         <button class="auth" mat-button  routerLink="login" *ngIf="!loggedIn" (click)="HeaderButtonLogin()">
             <mat-icon aria-hidden="false" aria-label="Acessar o sistema" fontIcon="login"></mat-icon>
-            Login
+            LOGIN
         </button>
         <button class="auth" mat-button *ngIf="loggedIn" (click)="logout()">
             <mat-icon aria-hidden="false" aria-label="Sair do sistema" fontIcon="logout"></mat-icon>
-            Logout
+            LOGOUT
         </button>
     </div>
 </mat-toolbar>

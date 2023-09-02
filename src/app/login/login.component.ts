@@ -36,6 +36,7 @@ export class LoginComponent {
   loggedIn = false;
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
+  breakpoint: number = (window.innerWidth <= 480) ? 1 : 4;
 
   constructor(
     private authService: AuthService,
@@ -49,6 +50,10 @@ export class LoginComponent {
 
   usuarios: Array<any> = [];
 
+  onResize(event: any): void {
+    this.breakpoint = (event.target.innerWidth <= 480) ? 1 : 4;
+  }
+  
   login(): void {
     this.authService.login(this.username, this.password).subscribe();
   }

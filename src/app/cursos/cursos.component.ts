@@ -28,6 +28,8 @@ export class CursosComponent implements OnInit {
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
+  breakpoint: number = (window.innerWidth <= 480) ? 1 : 4;
+
   constructor(
     private router: Router,
     private http: HttpClient,
@@ -40,6 +42,10 @@ export class CursosComponent implements OnInit {
     });
   }
 
+  onResize(event: any): void {
+    this.breakpoint = (event.target.innerWidth <= 480) ? 1 : 4;
+  }
+  
   verDetalhe(cursoId: string): void {   
     this.router.navigate(['/detalhes', cursoId]);
   }

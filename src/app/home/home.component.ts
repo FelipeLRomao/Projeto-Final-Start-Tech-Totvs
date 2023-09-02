@@ -1,5 +1,6 @@
-import { Component, Input, OnDestroy, OnInit, VERSION } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, VERSION} from '@angular/core';
 import { PoMenuItem, PoModule } from '@po-ui/ng-components';
+
 import { Router } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -32,6 +33,8 @@ export class HomeComponent implements OnInit {
   horizontalPosition: MatSnackBarHorizontalPosition = 'end';
   verticalPosition: MatSnackBarVerticalPosition = 'top';
 
+  breakpoint: number = (window.innerWidth <= 480) ? 1 : 4;
+
   constructor(
     private router: Router,
     public dialog: MatDialog,
@@ -45,8 +48,10 @@ export class HomeComponent implements OnInit {
     });
     this.iniciarTimer();
   }
-  //BOTÃO PARA TODOS OS CURSOS
 
+  onResize(event: any): void {
+    this.breakpoint = (event.target.innerWidth <= 480) ? 1 : 4;
+  }
   //DETALHES EM MODAL
   abrirModalCurso(): void {
     const dialogRef = this.dialog.open(LiveFormDialogComponent, {

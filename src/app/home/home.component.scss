@@ -101,6 +101,7 @@ h2{
 .todosCursos{
   text-decoration: none;
   margin-left: 450px;
+  margin-bottom: 20px;
   cursor: pointer;
   overflow: hidden;
   font-weight: bold;
@@ -122,7 +123,6 @@ mat-grid-tile {
   color: $branco;
    mat-card{
     margin: 5px;
-    width: 250px;
     border-radius: 0px 0px;
     padding: 3px;
     border: 1px solid $branco;
@@ -219,6 +219,7 @@ mat-grid-tile {
 }
 
 //depoimentos
+
 .example-card {
   max-width: 400px;
 }
@@ -240,3 +241,50 @@ mat-grid-tile {
 }
 
 
+//responsivo
+@media (max-width:480px){
+  .codecreators{
+    width: 95%;    
+  }
+
+  .container{
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+  //todos os títulos.
+h1{
+  font-size: 50px;
+  font-weight: bold; 
+}
+h2{
+  font-size: 20px;
+}
+.cursod {
+    gap: 0;
+    margin: 0 1rem;
+    grid-template-columns: 1fr
+  }
+.cursod_section {
+    padding: .5rem 0;
+  }
+
+  .container-cursos{
+    width: 100%;
+    overflow: hidden; 
+  }
+
+  //botão para todos os cursos
+.todosCursos {
+  margin-left: 120px;
+}
+
+.item {
+  height: 300px;
+  margin: 15px;
+}
+
+mat-grid-list{
+  background-color: #111111;
+}
+}
