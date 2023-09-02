@@ -47,11 +47,13 @@ export class LoginComponent {
     })
   }
 
+  usuarios: Array<any> = [];
+
   login(): void {
     this.authService.login(this.username, this.password).subscribe();
   }
 
-  CreateAccount(): void {
+  registerUser(username: string,): void {
     const newUser = {
       name: this.name,
       idade: this.idade,
@@ -61,36 +63,51 @@ export class LoginComponent {
       confirmPassword: this.confirmPassword,
       tipo: 'usuario'
     }
-    if (this.password != this.confirmPassword) {
-      this._snackBar.open('As senhas não são iguais! Confira novamente...', 'Fechar', {
-        horizontalPosition: this.horizontalPosition,
-        verticalPosition: this.verticalPosition,
-        duration: 3000
-      })
-    }
+    this.http.get<any>('http://localhost:3000/users')
+      .subscribe(
+        (response) => {
+          this.usuarios = response;
+          const usernameExistente = this.usuarios.find(user => user.username === username)
 
-    else {
-      this.http.post(' http://localhost:3000/users', newUser)
-        .subscribe(
-          (response) => {
-            this._snackBar.open('Criação de usuário concluída! Vá para o Login!', 'Fechar', {
+          if (usernameExistente) {
+            this._snackBar.open('O usuário já existe! Confira novamente...', 'Fechar', {
               horizontalPosition: this.horizontalPosition,
               verticalPosition: this.verticalPosition,
               duration: 3000
-            });
-            setTimeout(() => {
-              window.location.reload();
-            }, 5000);
-          },
-          (error) => {
-            console.error('Erro ao cadastrar usuário:', error);
-            this._snackBar.open('Erro ao cadastrar usuário!', 'Fechar', {
+            })
+          }
+
+          else if (this.password != this.confirmPassword) {
+            this._snackBar.open('As senhas não são iguais! Confira novamente...', 'Fechar', {
               horizontalPosition: this.horizontalPosition,
               verticalPosition: this.verticalPosition,
-              duration: 5000
-            });
+              duration: 3000
+            })
           }
-        )
-    }
+          else {
+            this.http.post(' http://localhost:3000/users', newUser)
+              .subscribe(
+                (response) => {
+                  this._snackBar.open('Criação de usuário concluída! Vá para o Login!', 'Fechar', {
+                    horizontalPosition: this.horizontalPosition,
+                    verticalPosition: this.verticalPosition,
+                    duration: 3000
+                  });
+                  setTimeout(() => {
+                    window.location.reload();
+                  }, 5000);
+                },
+                (error) => {
+                  console.error('Erro ao cadastrar usuário:', error);
+                  this._snackBar.open('Erro ao cadastrar usuário!', 'Fechar', {
+                    horizontalPosition: this.horizontalPosition,
+                    verticalPosition: this.verticalPosition,
+                    duration: 5000
+                  });
+                }
+              )
+          }
+        }
+      )
   }
 }
