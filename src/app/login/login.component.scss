@@ -53,7 +53,7 @@
                         color: transparent;
                         text-align: center;
                         margin-top: 15px;
-                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        font-family: 'Poppins', sans-serif;
 
                         &:hover {
                             background-image: linear-gradient(to right, #D91ECC,#479BDB,#3B52D9 );
@@ -76,7 +76,7 @@
                         h3 {
                             font-size: 20px;
                             margin-top: 10px;
-                            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                            font-family: 'Poppins', sans-serif;
                             cursor: default;
                         }
 
@@ -90,7 +90,7 @@
 
                         select{
                             border-radius: 3.5px;
-                            
+                            border: 2px solid $preto;
                             font-size: 15px;
                             width: 90%;
                             height: 50px;

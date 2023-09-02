@@ -1,6 +1,6 @@
 <div class="container" *ngIf="!loggedIn">
     <section id="loginPlace">
-        <mat-grid-list cols="1" rowHeight="16:7">
+        <mat-grid-list cols="1" rowHeight="14:9">
             <mat-grid-tile>
                 <mat-card>
                     <mat-card-content>
@@ -43,9 +43,6 @@
 
                                     <h3>Confirme sua senha</h3>
                                     <input [(ngModel)]="confirmPassword" type="password" name="confirmPassword" placeholder=" Digite sua senha..." required>
-
-                                    <h3>Confirme sua senha:</h3>
-                                    <input [(ngModel)]="confirmPassword" type="password" name="confirmPassword" placeholder=" Confirmação de senha..." required><br><br>
 
                                     <div class="example-button-row">
                                         <button (click)="CreateAccount()" mat-fab extended color="primary">
