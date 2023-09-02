@@ -1,6 +1,7 @@
 @import '../app.component.scss';
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Spice&display=swap');
 
+
 // imagem logo codecreators 
 .codecreators{
   width: 100%
@@ -12,15 +13,37 @@
 }
 
 //todos os títulos.
+.front{
+  background-image: linear-gradient(to top, #e9e6db, #f79503);
+  font-family: 'Poppins', sans-serif;
+  }
+
+.back{
+  background-image: linear-gradient(to top, #faf8f3, #53f309);
+  font-family: 'Poppins', sans-serif;
+}
+h1{
+  background-clip: text;
+  overflow-y: hidden;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 50px;
+  padding-top: 5px;
+  font-weight: bold;
+  text-align: center;  
+  font-family: 'Poppins', sans-serif;
+}
 h2{
   color: $branco;
   text-align: center;
   font-size: 35px;
   padding: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
 //front e back end - grid
 .cursod {
+  font-family: 'Poppins', sans-serif;
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -36,6 +59,7 @@ h2{
   margin: 0 auto 4rem auto;
   font-size: 60px;
   text-align: center;
+  font-family: 'Poppins', sans-serif;
 }
 .cursod_section {
   padding: 2rem 0;
@@ -59,6 +83,7 @@ h2{
   color: $branco;
   text-align: center;
   text-decoration: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 //cursos mais procurados
@@ -69,7 +94,7 @@ h2{
   
 }
 .fundo-cursos{
-  background-color: #181717;
+  background-color: #111111;
 }
 
 //botão para todos os cursos
@@ -110,10 +135,11 @@ mat-grid-tile {
       h2{
        padding: 20px;
        color: $cor-secundaria;
+       font-family: 'Poppins', sans-serif;
       }
       p{
         font-size: $media;
-        font-family: $fonte-secundaria;
+        font-family: 'Poppins', sans-serif;
         text-align: center;
         color: $branco;
       }
