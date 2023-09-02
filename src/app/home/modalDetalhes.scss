@@ -1,0 +1,78 @@
+@import "../app.component.scss";
+
+
+.container {
+    border: 3px solid #3B52D9;
+    background-color: black;
+    padding-bottom: 37px;
+    height: 483px;
+    transition: $card-transition;
+
+    h2 {
+        padding-top: 40px;
+        color: $branco;
+        text-align: center;
+        font-size: 30px;
+        line-height: $extra-grande;
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+
+    p {
+        margin-top: 12px;
+        margin-left: 10px;
+        margin-right: 10px;
+        color:$branco;
+        font-family: $fonte-secundaria;
+        font-style: italic;
+    }
+    h3{
+        color:$branco;
+        font-family: $fonte-secundaria;
+        font-size: 30px;
+        margin-left: 280px;
+    }
+
+    button {
+        display: flex;
+        width: 350px;
+        justify-content: center;
+        height: 40px;
+        margin-left: 25%;
+        margin-top: 30px;
+        padding: 8px;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 21px;
+        background-image: linear-gradient(to right, #3B52D9, #479BDB, #D91ECC);
+        color: $branco;
+        transition: background-color 0.5s;
+        box-shadow: 0 2px 10px 0 rgba(244, 236, 248, 0.75);
+        cursor: pointer;
+
+        &:hover {
+            background-color: #ccc;
+        }
+    }
+}
+
+@media (max-width: 480px){
+
+    .container {
+        height: 730px ;
+
+        h3{
+            color:$branco;
+            font-family: $fonte-secundaria;
+            font-size: 30px;
+            margin-left: 90px;
+        }
+
+        button{
+            width: 270px;
+            margin-left: 15px;
+            font-size: 18px;
+        }
+    }
+
+}

@@ -1,7 +1,9 @@
-import { Component, Input, OnDestroy, OnInit, VERSION } from '@angular/core';
-import { PoMenuItem, PoModule } from '@po-ui/ng-components';
+import { Component, Input, OnDestroy, OnInit, Inject, VERSION } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
+import { MAT_DIALOG_DATA } from '@angular/material/dialog';
+import {  } from '../admin/admin.component';
+
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
@@ -48,18 +50,12 @@ export class HomeComponent implements OnInit {
   //BOTÃO PARA TODOS OS CURSOS
 
   //DETALHES EM MODAL
-  abrirModalCurso(): void {
-    const dialogRef = this.dialog.open(LiveFormDialogComponent, {
-      width: '500px'
+  abrirModalCurso(cursoId:string): void {
+    this.dialog.open(detalheCurso, {
+      width: '700px',
+      height: '483px',
+      data: cursoId
     });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('O dialogo ira fechar');
-    });
-  }
-
-  verDetalhe(cursoId: string): void {   
-    this.router.navigate(['/detalhes', cursoId]);
   }
 
   // FAVORITANDO CURSOS
@@ -154,6 +150,27 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['/cursos'])
   }
 
-
 }
+
+@Component({
+  selector: 'modalDetalhes',
+  styleUrls: ['modalDetalhes.scss'],
+  templateUrl: 'modalDetalhes.html',
+  standalone: true,
+  imports: [MatDialogModule, NgIf, NgFor],
+})
+export class detalheCurso implements OnInit{
+  constructor(
+    public dialog: MatDialog,
+    public http : HttpClient,
+    @Inject(MAT_DIALOG_DATA) public data: any,) {}
+
+    ngOnInit(): void {
+      this.http.get<any>('http://localhost:3000/cursos/' + this.data).subscribe(response => {
+        this.cursos = response;
+      });
+    }
+
+    cursos: any = {}
+  }
 
