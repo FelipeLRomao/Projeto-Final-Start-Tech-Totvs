@@ -149,7 +149,7 @@
   "users": [
     {
       "name": "Vitor",
-      "idade": "mais de 30",
+      "idade": "18 a 23",
       "email": "vitor@teste.com",
       "username": "vitorVargem",
       "confirmUsername": "vitorVargem",
@@ -157,6 +157,16 @@
       "confirmPassword": "admin",
       "id": 1,
       "tipo": "admin"
+    },
+    {
+      "name": "mayla",
+      "idade": "24 a 30",
+      "email": "mayla@mayla.com",
+      "username": "mayla",
+      "password": "admin",
+      "confirmPassword": "admin",
+      "tipo": "admin",
+      "id": 2
     },
     {
       "name": "Vitor Vargem Julio Barbosa",
@@ -167,27 +177,7 @@
       "password": "123456",
       "confirmPassword": "123456",
       "tipo": "usuario",
-      "id": 2
-    },
-    {
-      "name": "mayla",
-      "idade": "24 a 30",
-      "email": "mayla@mayla.com",
-      "username": "mayla",
-      "password": "123",
-      "confirmPassword": "123",
-      "tipo": "usuario",
-      "id": 4
-    },
-    {
-      "name": "Vitor Vargem Julio Barbosa",
-      "idade": "15 a 18",
-      "email": "vitorvargem27@gmail.com",
-      "username": "teste",
-      "password": "123456",
-      "confirmPassword": "123456",
-      "tipo": "usuario",
-      "id": 5
+      "id": 3
     }
   ]
 }

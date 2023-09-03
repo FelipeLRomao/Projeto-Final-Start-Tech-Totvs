@@ -4,6 +4,11 @@
     margin: 0;
     padding: 0;
 }
+
+#abaLoginCelular {
+    display: none;
+}
+
 .container {
     #loginPlace {
         mat-grid-tile {
@@ -14,7 +19,7 @@
             }
 
             mat-card {
-                
+
                 background-color: white;
                 border-radius: 10px;
                 width: 700px;
@@ -28,9 +33,10 @@
                         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                         transform: text-shadow 2s;
                         overflow: hidden;
+
                         &:hover {
                             cursor: context-menu;
-                            background-image: linear-gradient(to right, #D91ECC,#3B52D9 );
+                            background-image: linear-gradient(to right, #D91ECC, #3B52D9);
                         }
                     }
 
@@ -46,7 +52,7 @@
 
                     h2 {
                         font-size: 50px;
-                        background-image: linear-gradient(to right,#3B52D9, #479BDB, #D91ECC);
+                        background-image: linear-gradient(to right, #3B52D9, #479BDB, #D91ECC);
                         background-clip: text;
                         overflow-y: hidden;
                         -webkit-background-clip: text;
@@ -56,7 +62,7 @@
                         font-family: 'Poppins', sans-serif;
 
                         &:hover {
-                            background-image: linear-gradient(to right, #D91ECC,#479BDB,#3B52D9 );
+                            background-image: linear-gradient(to right, #D91ECC, #479BDB, #3B52D9);
                             background-clip: text;
                             transform: text-shadow 2s;
                             overflow-y: hidden;
@@ -69,7 +75,8 @@
                     form {
                         margin-left: 80px;
                         padding-bottom: 40px;
-                        .changePassword{
+
+                        .changePassword {
                             cursor: pointer;
                         }
 
@@ -88,7 +95,7 @@
                             font-style: italic
                         }
 
-                        select{
+                        select {
                             border-radius: 3.5px;
                             border: 2px solid $preto;
                             font-size: 15px;
@@ -98,7 +105,7 @@
                         }
 
                         #changePassword {
-                            text-decoration: none;
+
                             &:hover {
                                 color: $branco;
                             }
@@ -108,25 +115,25 @@
                             text-decoration: none;
                             color: blue;
 
-                            &:hover{
+                            &:hover {
                                 color: $branco;
                             }
 
                         }
 
                         button {
-                            
+
                             margin-left: 180px;
                             margin-top: 50px;
                             background-image: linear-gradient(to right, #3B52D9, #479BDB, #D91ECC);
                             width: 150px;
 
                             &:hover {
-                                background-image: linear-gradient(to right,  #D91ECC,#479BDB,#3B52D9);
+                                background-image: linear-gradient(to right, #D91ECC, #479BDB, #3B52D9);
                                 transition: background-image 1s;
                             }
 
-                            a{
+                            a {
                                 color: black;
                                 text-decoration: none;
                             }
@@ -149,21 +156,96 @@
     }
 }
 
-#loggedIn{
+#loggedIn {
 
-    h1{
+    h1 {
         color: white;
-        
+
     }
 }
 
 @media (max-width: 480px) {
-    .container {
-       width: 100%; 
-       #loginPlace {
-        mat-grid-tile {
-            height: 1000px;
+
+    #loginPlace {
+        display: none;
+    }
+
+    #abaLoginCelular {
+        display: inline;
+    }
+
+    mat-tab-group {
+        background-color: white;
+
+        .mat-mdc-tab:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label, .mat-mdc-tab-link:not(.mat-mdc-tab-disabled).mdc-tab--active .mdc-tab__text-label{
+            color: white;
         }
-      }
-  }
+
+        .mat-mdc-tab{
+            background-image: linear-gradient(to right, #3B52D9, #479BDB, #D91ECC);
+        }
+
+        .mat-mdc-tab-body-content{
+            background-color: white;
+            height: 720px;
+        }
+
+        h2 {
+            font-size: 50px;
+            background-image: linear-gradient(to right, #3B52D9, #479BDB, #D91ECC);
+            background-clip: text;
+            overflow-y: hidden;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-align: center;
+            margin-top: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        form {
+            margin-left: 50px;
+            padding-bottom: 40px;
+            
+            h3 {
+                font-size: 20px;
+                margin-top: 10px;
+                font-family: 'Poppins', sans-serif;
+                cursor: default;
+            }
+
+            input {
+                border-radius: 2.5px;
+                font-size: 15px;
+                width: 90%;
+                height: 38px;
+                font-style: italic
+            }
+
+            select {
+                border-radius: 3.5px;
+                border: 2px solid $preto;
+                font-size: 15px;
+                width: 90%;
+                height: 38px;
+                font-style: italic
+            }
+
+            a {
+                color: blue;
+            }
+
+            button {
+                margin-left: 90px;
+                margin-top: 50px;
+                background-image: linear-gradient(to right, #3B52D9, #479BDB, #D91ECC);
+                width: 150px;
+
+                a {
+                    color: black;
+                }
+
+            }
+        }
+
+    }
 }
