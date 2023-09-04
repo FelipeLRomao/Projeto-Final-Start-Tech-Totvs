@@ -63,6 +63,7 @@ export class AdminComponent implements OnInit {
   modalAdicionar(enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(AdicionarCurso, {
       width: '1000px',
+      height: '100%',
       enterAnimationDuration,
       exitAnimationDuration,
     });
@@ -159,7 +160,7 @@ export class AdicionarCurso {
   adicionarCurso() {
     const novoCurso = {
       nome: this.name,
-      descricao: this.description,
+      description: this.description,
       descricao1: this.descricao1,
       descricao2: this.descricao2,
       descricao3: this.descricao3,
@@ -221,7 +222,7 @@ export class EditarCurso implements OnInit {
   editarCurso() {
     const dadosCurso = {
       nome: this.cursos.name,
-      descricao: this.cursos.description,
+      description: this.cursos.description,
       descricao1: this.cursos.descricao1,
       descricao2: this.cursos.descricao2,
       descricao3: this.cursos.descricao3,
