@@ -24,7 +24,6 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
-import { LiveFormDialogComponent } from './live-form-dialog/live-form-dialog.component';
 import { AuthService } from './auth.service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
@@ -33,8 +32,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     AppComponent,
     CabecalhoComponent,
     FooterComponent,
-    LiveFormDialogComponent,
-    DetalhesComponent,
+    DetalhesComponent
   ],
   imports: [
     BrowserModule,
