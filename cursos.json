@@ -143,6 +143,17 @@
       "descricao3": "Formação completa para o mercado.",
       "preco": "275.00",
       "favorito": false
+    },
+    {
+      "name": "Python",
+      "description": "Aprendendo do Zero",
+      "descricao1": "Nesse curso você irá se aprofundar em uma das linguagens mais utilizadas em Ciência de Dados, o Python. Irá explorar da instalação à seus princípios e funções, aprenderá a utilizar a linguagem em aplicações de dados.",
+      "descricao2": "Esse é um curso para quem busca aprender programação na linguagem Python, e que tem pouca ou nenhuma experiência com lógica de programação, algoritmos, programação orientada à objetos, banco de dados ou páginas para internet.",
+      "descricao3": "Aprendendo desenvolver programas com Python, seu perfil profissional terá muito mais chances de sucesso como programador, independente do seu nível de conhecimento.",
+      "foto": "https://i.ibb.co/Z2Bvc1q/Design-sem-nome-3.png",
+      "preco": "150.00",
+      "favorito": true,
+      "id": 13
     }
   ],
   "contato": [],

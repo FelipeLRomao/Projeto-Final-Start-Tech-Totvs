@@ -72,6 +72,7 @@ export class AdminComponent implements OnInit {
   modalEditar(cursoId: string, enterAnimationDuration: string, exitAnimationDuration: string): void {
     this.dialog.open(EditarCurso, {
       width: '1000px',
+      height: '100%',
       enterAnimationDuration,
       exitAnimationDuration,
       data: cursoId
@@ -157,9 +158,13 @@ export class AdicionarCurso {
     public dialogRef: MatDialogRef<AdicionarCurso>
   ) { }
 
+  load() {
+    location.reload()
+  }
+
   adicionarCurso() {
     const novoCurso = {
-      nome: this.name,
+      name: this.name,
       description: this.description,
       descricao1: this.descricao1,
       descricao2: this.descricao2,
@@ -178,6 +183,8 @@ export class AdicionarCurso {
             verticalPosition: this.verticalPosition,
             duration: 5000
           });
+
+          this.load()
         },
         (error) => {
           console.error('Erro ao cadastrar curso:', error);
@@ -219,6 +226,10 @@ export class EditarCurso implements OnInit {
     });
   }
 
+  load() {
+    location.reload()
+  }
+
   editarCurso() {
     const dadosCurso = {
       nome: this.cursos.name,
@@ -240,6 +251,7 @@ export class EditarCurso implements OnInit {
             verticalPosition: this.verticalPosition,
             duration: 5000
           });
+          this.load()
         },
         (error) => {
           console.error('Erro ao alterar curso:', error);
